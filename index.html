@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Song History · Incorrect Guesses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─── */
+    :root {
+      --bg:      #0a0a0f;
+      --surface: #111118;
+      --border:  #1e1e2e;
+      --accent:  #e8ff57;
+      --muted:   #3a3a4e;
+      --text:    #e8e8f0;
+      --sub:     #6b6b88;
+      --danger:  #ff5f6d;
+      --font-display: 'Syne', sans-serif;
+      --font-mono:    'Space Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-display);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ─── NOISE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── GRID ACCENT ─── */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── LAYOUT ─── */
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      margin-bottom: 56px;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      margin-top: 16px;
+      color: var(--sub);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 480px;
+    }
+
+    /* ─── SETUP BANNER ─── */
+    .setup-banner {
+      background: #0f0f1a;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--sub);
+      line-height: 1.8;
+    }
+
+    .setup-banner strong { color: var(--accent); font-weight: 700; }
+    .setup-banner code {
+      background: var(--muted);
+      color: var(--text);
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    /* ─── CONTROLS ─── */
+    .controls {
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      flex: 1;
+      min-width: 140px;
+    }
+
+    label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sub);
+    }
+
+    input[type="number"], input[type="text"] {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      padding: 12px 16px;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    input:focus { border-color: var(--accent); }
+
+    .btn {
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      padding: 12px 28px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.15s, opacity 0.15s;
+      white-space: nowrap;
+      align-self: flex-end;
+    }
+
+    .btn:hover:not(:disabled) { transform: translateY(-2px); opacity: 0.92; }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* Toggle */
+    .toggle-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .toggle {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    .toggle input { display: none; }
+
+    .toggle-track {
+      position: absolute; inset: 0;
+      background: var(--muted);
+      border-radius: 99px;
+      transition: background 0.2s;
+    }
+
+    .toggle input:checked ~ .toggle-track { background: var(--accent); }
+
+    .toggle-knob {
+      position: absolute;
+      top: 3px; left: 3px;
+      width: 18px; height: 18px;
+      background: var(--bg);
+      border-radius: 50%;
+      transition: left 0.2s;
+    }
+
+    .toggle input:checked ~ .toggle-knob { left: 23px; }
+
+    .toggle-label {
+      font-size: 0.85rem;
+      color: var(--sub);
+      user-select: none;
+    }
+
+    /* ─── STATUS ─── */
+    #status {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--sub);
+      margin-bottom: 28px;
+      min-height: 1.4em;
+    }
+
+    #status.error { color: var(--danger); }
+
+    /* ─── PROGRESS ─── */
+    .progress-wrap {
+      display: none;
+      margin-bottom: 28px;
+    }
+
+    .progress-wrap.visible { display: block; }
+
+    .progress-bar-bg {
+      height: 3px;
+      background: var(--border);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 99px;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    /* ─── RESULTS HEADER ─── */
+    .results-header {
+      display: none;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .results-header.visible { display: flex; }
+
+    .results-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .results-meta {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--sub);
+    }
+
+    /* ─── TABLE ─── */
+    .table-wrap {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: none;
+    }
+
+    .table-wrap.visible { display: block; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+    }
+
+    thead tr {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      padding: 12px 20px;
+      text-align: left;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sub);
+      font-weight: 700;
+    }
+
+    th:last-child { text-align: right; }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.12s;
+    }
+
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--surface); }
+
+    td {
+      padding: 13px 20px;
+      color: var(--text);
+    }
+
+    td:first-child {
+      color: var(--sub);
+      font-size: 0.72rem;
+      width: 52px;
+    }
+
+    td.music-id {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    td.instances {
+      text-align: right;
+    }
+
+    .bar {
+      display: inline-block;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 99px;
+      opacity: 0.3;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <p class="eyebrow">Quiz Song History</p>
+    <h1>Incorrect<br/><em>Guesses</em></h1>
+    <p class="subtitle">Query the song history database to find which tracks trip up a player the most.</p>
+  </header>
+
+  <!-- SETUP INSTRUCTIONS -->
+  <div class="setup-banner" id="setupBanner">
+    <strong>⚙ Setup required</strong> — paste your <code>history.db</code> GitHub Release download URL below.<br/>
+    Don't have one yet? Run <code>python convert_to_sqlite.py --file songhistorydump.txt</code>, then upload<br/>
+    <code>history.db</code> to a GitHub Release and paste the asset URL in the <strong>DB_URL</strong> field.
+  </div>
+
+  <!-- DB URL -->
+  <div class="controls" style="margin-bottom: 16px;">
+    <div class="field" style="flex: 3;">
+      <label>Database URL (history.db from GitHub Release)</label>
+      <input type="text" id="dbUrl"
+        placeholder="https://github.com/you/repo/releases/download/v1/history.db"
+        value="" />
+    </div>
+    <button class="btn" id="loadBtn" onclick="loadDB()">Load DB</button>
+  </div>
+
+  <!-- QUERY CONTROLS -->
+  <div class="controls">
+    <div class="field">
+      <label>Player ID</label>
+      <input type="number" id="playerId" placeholder="27" min="1" />
+    </div>
+    <div class="field">
+      <label>Limit</label>
+      <input type="number" id="limitVal" value="100" min="1" max="1000" />
+    </div>
+    <button class="btn" id="queryBtn" onclick="runQuery()" disabled>Query</button>
+  </div>
+
+  <!-- NEVER-CORRECT TOGGLE -->
+  <div class="toggle-wrap">
+    <label class="toggle">
+      <input type="checkbox" id="neverCorrect" />
+      <span class="toggle-track"></span>
+      <span class="toggle-knob"></span>
+    </label>
+    <span class="toggle-label">Exclude songs the player has <em>ever</em> guessed correctly</span>
+  </div>
+
+  <!-- STATUS + PROGRESS -->
+  <div id="status">No database loaded.</div>
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressFill"></div></div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results-header" id="resultsHeader">
+    <span class="results-title" id="resultsTitle"></span>
+    <span class="results-meta" id="resultsMeta"></span>
+  </div>
+
+  <div class="table-wrap" id="tableWrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Music ID</th>
+          <th style="text-align:right">Incorrect Guesses</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- sql.js via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+<script>
+  let SQL = null;
+  let db  = null;
+
+  const status      = document.getElementById('status');
+  const progressWrap= document.getElementById('progressWrap');
+  const progressFill= document.getElementById('progressFill');
+  const queryBtn    = document.getElementById('queryBtn');
+  const resultsHeader = document.getElementById('resultsHeader');
+  const tableWrap   = document.getElementById('tableWrap');
+
+  function setStatus(msg, isError = false) {
+    status.textContent = msg;
+    status.className = isError ? 'error' : '';
+  }
+
+  function setProgress(pct) {
+    progressFill.style.width = pct + '%';
+  }
+
+  async function loadDB() {
+    const url = document.getElementById('dbUrl').value.trim();
+    if (!url) { setStatus('Please enter a database URL.', true); return; }
+
+    document.getElementById('loadBtn').disabled = true;
+    progressWrap.classList.add('visible');
+    setProgress(0);
+    setStatus('Initialising sql.js...');
+
+    try {
+      if (!SQL) {
+        SQL = await initSqlJs({
+          locateFile: f => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/${f}`
+        });
+      }
+
+      setStatus('Fetching database... (this may take a moment for large files)');
+
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+
+      const contentLength = response.headers.get('content-length');
+      const total = contentLength ? parseInt(contentLength) : null;
+      const reader = response.body.getReader();
+      const chunks = [];
+      let received = 0;
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        chunks.push(value);
+        received += value.length;
+        if (total) {
+          const pct = Math.round((received / total) * 90);
+          setProgress(pct);
+          setStatus(`Downloading… ${(received / 1048576).toFixed(1)} MB / ${(total / 1048576).toFixed(1)} MB`);
+        } else {
+          setStatus(`Downloading… ${(received / 1048576).toFixed(1)} MB received`);
+        }
+      }
+
+      setProgress(95);
+      setStatus('Opening database...');
+
+      const buffer = new Uint8Array(received);
+      let offset = 0;
+      for (const chunk of chunks) { buffer.set(chunk, offset); offset += chunk.length; }
+
+      if (db) db.close();
+      db = new SQL.Database(buffer);
+
+      setProgress(100);
+      setStatus(`✓ Database loaded (${(received / 1048576).toFixed(1)} MB). Enter a Player ID and query.`);
+      queryBtn.disabled = false;
+      document.getElementById('setupBanner').style.display = 'none';
+      setTimeout(() => progressWrap.classList.remove('visible'), 600);
+
+    } catch (err) {
+      setStatus('Error loading database: ' + err.message, true);
+      progressWrap.classList.remove('visible');
+    } finally {
+      document.getElementById('loadBtn').disabled = false;
+    }
+  }
+
+  function runQuery() {
+    if (!db) { setStatus('Load a database first.', true); return; }
+
+    const playerId    = parseInt(document.getElementById('playerId').value);
+    const limit       = parseInt(document.getElementById('limitVal').value) || 100;
+    const neverCorrect= document.getElementById('neverCorrect').checked;
+
+    if (!playerId) { setStatus('Enter a valid Player ID.', true); return; }
+
+    try {
+      let sql;
+
+      if (neverCorrect) {
+        sql = `
+          SELECT music_id, COUNT(*) AS instances
+          FROM quiz_song_history
+          WHERE user_id = ${playerId}
+            AND is_correct = 0
+            AND guess_kind = 0
+            AND music_id NOT IN (
+              SELECT DISTINCT music_id
+              FROM quiz_song_history
+              WHERE user_id = ${playerId}
+                AND is_correct = 1
+                AND guess_kind = 0
+            )
+          GROUP BY music_id
+          ORDER BY instances DESC
+          LIMIT ${limit};
+        `;
+      } else {
+        sql = `
+          SELECT music_id, COUNT(*) AS instances
+          FROM quiz_song_history
+          WHERE user_id = ${playerId}
+            AND is_correct = 0
+            AND guess_kind = 0
+          GROUP BY music_id
+          ORDER BY instances DESC
+          LIMIT ${limit};
+        `;
+      }
+
+      const result = db.exec(sql);
+      const rows   = result.length > 0 ? result[0].values : [];
+
+      renderResults(playerId, rows, neverCorrect, limit);
+      setStatus(`Query complete — ${rows.length} result${rows.length !== 1 ? 's' : ''} for Player ${playerId}.`);
+    } catch (err) {
+      setStatus('Query error: ' + err.message, true);
+    }
+  }
+
+  function renderResults(playerId, rows, neverCorrect, limit) {
+    const tbody = document.getElementById('tbody');
+    const title = document.getElementById('resultsTitle');
+    const meta  = document.getElementById('resultsMeta');
+
+    title.textContent = `PlayerID: ${playerId}`;
+    meta.textContent  = `Top ${rows.length} incorrect guess${rows.length !== 1 ? 'es' : ''}` +
+                        (neverCorrect ? ' · never correct' : '');
+
+    resultsHeader.classList.add('visible');
+    tableWrap.classList.add('visible');
+
+    const maxInstances = rows.length > 0 ? rows[0][1] : 1;
+
+    tbody.innerHTML = rows.map(([musicId, instances], i) => {
+      const barWidth = Math.round((instances / maxInstances) * 80);
+      return `
+        <tr>
+          <td>${i + 1}</td>
+          <td class="music-id">${musicId}</td>
+          <td class="instances">${instances}<span class="bar" style="width:${barWidth}px"></span></td>
+        </tr>`;
+    }).join('');
+
+    if (rows.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="3" style="text-align:center;color:var(--sub);padding:32px">No results found.</td></tr>`;
+    }
+  }
+
+  // Allow Enter key on inputs
+  document.getElementById('playerId').addEventListener('keydown', e => { if (e.key === 'Enter') runQuery(); });
+  document.getElementById('dbUrl').addEventListener('keydown',   e => { if (e.key === 'Enter') loadDB(); });
+</script>
+</body>
+</html>

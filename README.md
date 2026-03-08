@@ -1,6 +1,4 @@
-# Song History — Incorrect Guesses
-
-Fully static — no backend, no database, no API keys. Just GitHub Pages.
+# EMQ Song History — Incorrect Guesses
 
 ---
 
@@ -46,14 +44,6 @@ git commit -m "add song history app"
 git push
 ```
 
-Then: **Settings → Pages → Source: main branch / root → Save**
-
-Your site will be live at `https://<you>.github.io/<repo>/`
-
----
-
 ## Notes
-
-- The toggle (never-correct mode) uses the same fetched file — no second request.
 - If a player ID has no data, the app shows a clear "not found" message.
 - To update data, re-run `precompute.py` and push the new `data/` folder.

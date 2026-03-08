@@ -1,1 +1,1 @@
-{"player_id":935,"incorrect":[{"music_id":7416,"instances":1},{"music_id":13500,"instances":1},{"music_id":34962,"instances":1}],"never_correct":[{"music_id":7416,"instances":1},{"music_id":13500,"instances":1},{"music_id":34962,"instances":1}]}
+{"player_id":935,"incorrect":[{"music_id":7416,"instances":1,"total":1},{"music_id":13500,"instances":1,"total":1},{"music_id":34962,"instances":1,"total":1}],"never_correct":[{"music_id":7416,"instances":1,"total":1},{"music_id":13500,"instances":1,"total":1},{"music_id":34962,"instances":1,"total":1}]}

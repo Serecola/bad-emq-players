@@ -243,8 +243,8 @@
 
 <header>
   <div>
-    <h1>Incorrect Guesses</h1>
-    <p>Quiz song history lookup</p>
+    <h1>EMQ Incorrect Guesses</h1>
+    <p>step 1 to fixing skill issue</p>
   </div>
   <div class="header-right">
     <div class="last-updated">
@@ -266,7 +266,7 @@
       </div>
       <div class="field" style="max-width:100px">
         <label for="limitVal">Limit</label>
-        <input type="number" id="limitVal" value="100" min="1" max="1000" />
+        <input type="number" id="limitVal" value="100" min="1" max="100" />
       </div>
       <button class="btn" onclick="runQuery()">Search</button>
     </div>
@@ -365,7 +365,7 @@
 
   function renderResults() {
     const neverCorrect = $('neverCorrect').checked;
-    const limit = parseInt($('limitVal').value) || 100;
+    const limit = Math.min(parseInt($('limitVal').value) || 100, 100);
     const rows = (neverCorrect ? currentData.never_correct : currentData.incorrect).slice(0, limit);
 
     $('resultsMeta').textContent =
@@ -380,7 +380,7 @@
       : rows.map(({ music_id, instances, total }, i) => `
           <tr>
             <td class="rank">${i + 1}</td>
-            <td class="mid"><a href="https://erogemusicquiz.com/em${music_id}" target="_blank" rel="noopener">${music_id}</a></td>
+            <td class="mid"><a href="https://erogemusicquiz.com/ems${music_id}" target="_blank" rel="noopener">${music_id}</a></td>
             <td class="count">
               <div class="bar-wrap">
                 <span style="color:#e05252">${instances}</span><span style="color:var(--text-dim)">/${total}</span>

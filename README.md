@@ -1,5 +1,7 @@
 # EMQ Song History — Incorrect Guesses
 
+https://serecola.github.io/bad-emq-players/
+
 ---
 
 ## How it works

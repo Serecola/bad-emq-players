@@ -445,6 +445,8 @@
           <tr>
             <th>#</th>
             <th>Music ID</th>
+            <th>Source Title</th>
+            <th>Song Title</th>
             <th>Incorrect / Total</th>
           </tr>
         </thead>
@@ -587,7 +589,18 @@
     if (currentData) renderResults();
   }
 
-  function renderResults() {
+  let songsData = null;
+
+  async function loadSongsData() {
+    if (songsData) return songsData;
+    try {
+      const res = await fetch('data_songs/songs.json');
+      if (res.ok) songsData = await res.json();
+    } catch (_) {}
+    return songsData;
+  }
+
+  async function renderResults() {
     const neverCorrect = $('neverCorrect').checked;
     const limit = Math.min(parseInt($('limitVal').value) || 100, 100);
     const rows  = (neverCorrect ? currentData.never_correct : currentData.incorrect).slice(0, limit);
@@ -601,14 +614,14 @@
       (neverCorrect ? ' · never correct only' : '');
     $('resultsMeta').className = 'results-meta on';
 
-    const max = rows.length > 0 ? rows[0].instances : 1;
-
     $('tbody').innerHTML = rows.length === 0
-      ? `<tr><td colspan="3" class="empty">No results found.</td></tr>`
+      ? `<tr><td colspan="5" class="empty">No results found.</td></tr>`
       : rows.map(({ music_id, instances, total }, i) => `
           <tr>
             <td class="rank">${i + 1}</td>
             <td class="mid"><a href="https://erogemusicquiz.com/em${music_id}" target="_blank" rel="noopener">${music_id}</a></td>
+            <td class="title-cell" id="src-${music_id}" style="color:var(--text-muted);font-size:0.8rem">…</td>
+            <td class="title-cell" id="sng-${music_id}" style="color:var(--text-muted);font-size:0.8rem">…</td>
             <td class="count">
               <div class="bar-wrap">
                 <span style="color:#e05252">${instances}</span><span style="color:var(--text-dim)">/${total}</span>
@@ -623,6 +636,17 @@
 
     $('resultsCard').style.display = 'block';
     setStatus('Done.', 'ok');
+
+    if (rows.length > 0) {
+      const songs = await loadSongsData();
+      for (const { music_id } of rows) {
+        const t = songs?.[music_id];
+        const srcEl = $(`src-${music_id}`);
+        const sngEl = $(`sng-${music_id}`);
+        if (srcEl) { srcEl.textContent = t?.s || '—'; srcEl.style.color = ''; srcEl.style.fontSize = ''; }
+        if (sngEl) { sngEl.textContent = t?.t || '—'; sngEl.style.color = ''; sngEl.style.fontSize = ''; }
+      }
+    }
   }
 
   $('playerId').addEventListener('keydown', e => { if (e.key === 'Enter') runQuery(); });

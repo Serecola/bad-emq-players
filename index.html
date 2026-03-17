@@ -643,7 +643,19 @@
         const t = songs?.[music_id];
         const srcEl = $(`src-${music_id}`);
         const sngEl = $(`sng-${music_id}`);
-        if (srcEl) { srcEl.textContent = t?.s || '—'; srcEl.style.color = ''; srcEl.style.fontSize = ''; }
+        if (srcEl) {
+          const srcTitle = t?.s || null;
+          srcEl.style.color = ''; srcEl.style.fontSize = '';
+          if (srcTitle) {
+            const vndbId = t?.v;
+            const url = vndbId
+              ? `https://vndb.org/v${vndbId}`
+              : `https://vndb.org/v?q=${encodeURIComponent(srcTitle)}&sb=Search%21&ch=&f=&s=26w`;
+            srcEl.innerHTML = `<a href="${url}" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;border-bottom:1px solid var(--border);transition:border-color 0.15s" onmouseover="this.style.borderColor='var(--text)'" onmouseout="this.style.borderColor='var(--border)'">${srcTitle}</a>`;
+          } else {
+            srcEl.textContent = '—';
+          }
+        }
         if (sngEl) { sngEl.textContent = t?.t || '—'; sngEl.style.color = ''; sngEl.style.fontSize = ''; }
       }
     }

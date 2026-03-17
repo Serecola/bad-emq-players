@@ -18,6 +18,10 @@ EXTRACTS = [
         "start": "COPY public.music_title (music_id, latin_title, non_latin_title, language, is_main_title) FROM stdin;",
         "output": "music_title_dump.txt",
     },
+    {
+        "start": "COPY public.music_source_external_link (music_source_id, url, type, name) FROM stdin;",
+        "output": "music_source_external_link_dump.txt",
+    },
 ]
 
 

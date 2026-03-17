@@ -11,6 +11,7 @@ Usage:
                                --mst music_source_title_dump.txt
                                --mt  music_title_dump.txt
                                --out songs.json
+                               --msel music_source_external_link_dump.txt
 """
 
 import argparse
@@ -52,7 +53,7 @@ def best_title(entries):
     return fallback[0] if fallback else None
 
 
-def precompute(msm_path, mst_path, mt_path, out_path):
+def precompute(msm_path, mst_path, mt_path, msel_path, out_path):
     os.makedirs(os.path.dirname(out_path), exist_ok=True) if os.path.dirname(out_path) else None
     # 1. music_source_music: music_id -> list of music_source_ids
     print(f"Reading '{msm_path}'...")
@@ -71,7 +72,22 @@ def precompute(msm_path, mst_path, mt_path, out_path):
             (row["latin_title"], row["is_main_title"])
         )
 
-    # 3. music_title: music_id -> list of (latin_title, is_main_title)
+    # 3. music_source_external_link: music_source_id -> vndb id (type=1 only)
+    print(f"Reading '{msel_path}'...")
+    source_vndb_id = {}
+    for row in parse_dump(msel_path, ["music_source_id", "url", "type", "name"]):
+        if row["type"] != "1":
+            continue
+        src_id = int(row["music_source_id"])
+        if src_id in source_vndb_id:
+            continue
+        # Extract trailing number from URL e.g. https://vndb.org/v18717 -> 18717
+        url = row["url"].rstrip()
+        vndb_id = url.split("/v")[-1] if "/v" in url else None
+        if vndb_id and vndb_id.isdigit():
+            source_vndb_id[src_id] = vndb_id
+
+    # 4. music_title: music_id -> list of (latin_title, is_main_title)
     print(f"Reading '{mt_path}'...")
     music_titles = defaultdict(list)
     for row in parse_dump(mt_path, ["music_id", "latin_title", "non_latin_title", "language", "is_main_title"]):
@@ -89,9 +105,17 @@ def precompute(msm_path, mst_path, mt_path, out_path):
         for src_id in music_to_sources.get(music_id, []):
             source_entries.extend(source_titles.get(src_id, []))
 
+        # Find first vndb id from linked sources (excluding ignored ones)
+        vndb_id = None
+        for src_id in music_to_sources.get(music_id, []):
+            if src_id in source_vndb_id:
+                vndb_id = source_vndb_id[src_id]
+                break
+
         songs[music_id] = {
-            "s": best_title(source_entries),       # source_title
-            "t": best_title(music_titles.get(music_id, [])),  # song_title
+            "s": best_title(source_entries),
+            "t": best_title(music_titles.get(music_id, [])),
+            "v": vndb_id,
         }
 
     print(f"Writing '{out_path}'...")
@@ -107,9 +131,10 @@ def main():
     parser.add_argument("--msm", default="music_source_music_dump.txt", help="music_source_music dump")
     parser.add_argument("--mst", default="music_source_title_dump.txt", help="music_source_title dump")
     parser.add_argument("--mt",  default="music_title_dump.txt",        help="music_title dump")
+    parser.add_argument("--msel", default="music_source_external_link_dump.txt", help="music_source_external_link dump")
     parser.add_argument("--out", default="data_songs/songs.json",       help="Output file (default: data_songs/songs.json)")
     args = parser.parse_args()
-    precompute(args.msm, args.mst, args.mt, args.out)
+    precompute(args.msm, args.mst, args.mt, args.msel, args.out)
 
 
 if __name__ == "__main__":

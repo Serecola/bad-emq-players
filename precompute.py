@@ -7,6 +7,7 @@ Each file (e.g. data/27.json) contains both result sets so the web app
 can serve both modes (all incorrect / never-correct) with a single fetch.
 
 Usage:
+    python precompute.py
     python precompute.py --file songhistorydump.txt
     python precompute.py --file songhistorydump.txt --out data --limit 100
 
@@ -14,6 +15,7 @@ Then commit the data/ folder alongside index.html and push to GitHub Pages.
 """
 
 import argparse
+import glob
 import json
 import os
 import sys
@@ -31,9 +33,9 @@ def precompute(input_path: str, out_dir: str, limit: int):
     os.makedirs(out_dir, exist_ok=True)
 
     # Per-player accumulators
-    incorrect = defaultdict(Counter)   # incorrect[user_id][music_id] = count
+    incorrect = defaultdict(Counter)     # incorrect[user_id][music_id] = count
     total_guesses = defaultdict(Counter) # total_guesses[user_id][music_id] = count
-    correct   = defaultdict(set)       # correct[user_id] = {music_id, ...}
+    correct   = defaultdict(set)         # correct[user_id] = {music_id, ...}
 
     in_copy_block = False
     total = 0
@@ -64,6 +66,8 @@ def precompute(input_path: str, out_dir: str, limit: int):
                 continue
 
             user_id  = int(row["user_id"])
+            if user_id > 100000:
+                continue
             music_id = int(row["music_id"])
 
             if row["is_correct"] == "t":
@@ -100,8 +104,8 @@ def precompute(input_path: str, out_dir: str, limit: int):
         ][:limit]
 
         payload = {
-            "player_id":    user_id,
-            "incorrect":    all_incorrect,
+            "player_id":     user_id,
+            "incorrect":     all_incorrect,
             "never_correct": never_correct,
         }
 
@@ -110,6 +114,15 @@ def precompute(input_path: str, out_dir: str, limit: int):
             json.dump(payload, f, separators=(",", ":"))
 
     print(f"Done! Wrote {len(all_users):,} files to '{out_dir}/'.")
+
+    # Clean up any public_pgdump* files in the current directory
+    pgdump_files = glob.glob("public_pgdump*.txt")
+    if pgdump_files:
+        print("Cleaning up pgdump files...")
+        for path in pgdump_files:
+            os.remove(path)
+            print(f"  Deleted: {path}")
+
     print("\nNext steps:")
     print("  1. Commit the data/ folder and index.html to your repo")
     print("  2. Enable GitHub Pages (Settings → Pages → main branch / root)")
@@ -118,9 +131,9 @@ def precompute(input_path: str, out_dir: str, limit: int):
 
 def main():
     parser = argparse.ArgumentParser(description="Pre-compute incorrect guess JSON files from a dump.")
-    parser.add_argument("--file",  required=True,      help="Path to the .txt dump file")
-    parser.add_argument("--out",   default="data",     help="Output directory (default: data/)")
-    parser.add_argument("--limit", default=100, type=int, help="Max results per player (default: 100)")
+    parser.add_argument("--file",  default="songhistorydump.txt", help="Path to the .txt dump file (default: songhistorydump.txt)")
+    parser.add_argument("--out",   default="data",                help="Output directory (default: data/)")
+    parser.add_argument("--limit", default=100, type=int,         help="Max results per player (default: 100)")
     args = parser.parse_args()
     precompute(args.file, args.out, args.limit)
 

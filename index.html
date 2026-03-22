@@ -363,6 +363,25 @@
 
     .empty { text-align: center; color: var(--text-muted); padding: 28px; font-size: 0.85rem; }
 
+    .tab-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 7px 14px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      font-family: inherit;
+      color: var(--text-sub);
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+    .tab-btn:hover { border-color: var(--text-sub); color: var(--text); }
+    .tab-btn.active {
+      background: var(--btn-bg);
+      border-color: var(--btn-bg);
+      color: var(--surface);
+    }
+
     @media (max-width: 600px) {
       .layout { flex-direction: column; }
       .sidebar { width: 100%; min-height: unset; border-right: none; border-bottom: 1px solid var(--border); }
@@ -433,6 +452,12 @@
       </div>
     </div>
 
+    <!-- Section tabs -->
+    <div style="display:flex;gap:8px;margin-bottom:16px;max-width:680px">
+      <button class="tab-btn active" id="tabSong" onclick="switchTab('song')">🎵 Song Guesses</button>
+      <button class="tab-btn" id="tabArtist" onclick="switchTab('artist')">🎤 Artist Guesses</button>
+    </div>
+
     <div id="status">
       <span class="spinner" id="spinner"></span>
       <span id="statusText">Enter a Player ID to begin.</span>
@@ -454,6 +479,22 @@
         <tbody id="tbody"></tbody>
       </table>
     </div>
+
+    <!-- Artist results card -->
+    <div class="card" id="artResultsCard" style="display:none">
+      <div class="results-meta" id="artResultsMeta"></div>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Artist ID</th>
+            <th>Artist</th>
+            <th>Incorrect / Total</th>
+          </tr>
+        </thead>
+        <tbody id="artTbody"></tbody>
+      </table>
+    </div>
   </main>
 </div>
 
@@ -461,6 +502,19 @@
   const $ = id => document.getElementById(id);
   let currentData = null;
   let activePresetId = null;
+  let activeTab = 'song';
+
+  function switchTab(tab) {
+    activeTab = tab;
+    $('tabSong').classList.toggle('active', tab === 'song');
+    $('tabArtist').classList.toggle('active', tab === 'artist');
+    if (currentData) {
+      $('resultsCard').style.display    = tab === 'song'   ? 'block' : 'none';
+      $('artResultsCard').style.display = tab === 'artist' ? 'block' : 'none';
+      if (tab === 'artist') renderArtistResults();
+      if (tab === 'song')   renderResults();
+    }
+  }
 
   // ── Dark mode ─────────────────────────────────────────────────────────
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -571,6 +625,7 @@
     setLoading(true);
     currentData = null;
     $('resultsCard').style.display = 'none';
+    $('artResultsCard').style.display = 'none';
     setStatus(`Loading player ${playerId}…`);
 
     try {
@@ -579,6 +634,7 @@
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       currentData = await res.json();
       renderResults();
+      renderArtistResults();
     } catch (err) {
       setStatus(err.message, 'error');
     } finally {
@@ -587,7 +643,7 @@
   }
 
   function rerenderIfLoaded() {
-    if (currentData) renderResults();
+    if (currentData) { renderResults(); renderArtistResults(); }
   }
 
   let songsData = null;
@@ -647,7 +703,7 @@
           </tr>`
         ).join('');
 
-    $('resultsCard').style.display = 'block';
+    $('resultsCard').style.display = activeTab === 'song' ? 'block' : 'none';
     setStatus('Done.', 'ok');
 
     if (rows.length > 0) {
@@ -684,6 +740,44 @@
         }
       }
     }
+  }
+
+  async function renderArtistResults() {
+    if (!currentData) return;
+    const neverCorrect = $('neverCorrect').checked;
+    const limit = Math.min(parseInt($('limitVal').value) || 100, 100);
+    const rows  = (neverCorrect ? currentData.art_never_correct : currentData.art_incorrect).slice(0, limit);
+
+    const presets = loadPresets();
+    const preset  = presets.find(p => p.id === currentData.player_id);
+    const label   = preset ? `${preset.name} (ID: ${currentData.player_id})` : `Player ${currentData.player_id}`;
+
+    $('artResultsMeta').textContent =
+      `${label} · ${rows.length} result${rows.length !== 1 ? 's' : ''} · artist guesses` +
+      (neverCorrect ? ' · never correct only' : '');
+    $('artResultsMeta').className = 'results-meta on';
+
+    $('artTbody').innerHTML = rows.length === 0
+      ? `<tr><td colspan="4" class="empty">No artist guess data found.</td></tr>`
+      : rows.map(({ artist_id, name, instances, total }, i) => `
+          <tr>
+            <td class="rank">${i + 1}</td>
+            <td class="mid"><a href="https://erogemusicquiz.com/ea${artist_id}" target="_blank" rel="noopener">${artist_id}</a></td>
+            <td class="mid">${name}</td>
+            <td class="count">
+              <div class="bar-wrap">
+                <span style="color:#e05252">${instances}</span><span style="color:var(--text-dim)">/${total}</span>
+                <div style="display:flex;height:6px;border-radius:99px;overflow:hidden;width:60px;background:var(--border)">
+                  <div style="width:${Math.round((instances / total) * 100)}%;background:#e05252"></div>
+                  <div style="flex:1;background:#4caf7d"></div>
+                </div>
+              </div>
+            </td>
+          </tr>`
+        ).join('');
+
+    // Always render data; visibility is controlled by switchTab and the search flow
+    $('artResultsCard').style.display = activeTab === 'artist' ? 'block' : 'none';
   }
 
   $('playerId').addEventListener('keydown', e => { if (e.key === 'Enter') runQuery(); });

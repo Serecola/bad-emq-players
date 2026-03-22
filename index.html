@@ -450,6 +450,16 @@
           Only include songs the player has never guessed correctly
         </span>
       </div>
+      <div class="toggle-row" id="pctToggleRow" style="display:none">
+        <label class="switch">
+          <input type="checkbox" id="pctMode" onchange="rerenderIfLoaded()" />
+          <span class="track"></span>
+          <span class="knob"></span>
+        </label>
+        <span class="toggle-label" onclick="document.getElementById('pctMode').click()">
+          Sort by incorrect % (min. 10 guesses, excludes 0% rate)
+        </span>
+      </div>
     </div>
 
     <!-- Section tabs -->
@@ -508,6 +518,7 @@
     activeTab = tab;
     $('tabSong').classList.toggle('active', tab === 'song');
     $('tabArtist').classList.toggle('active', tab === 'artist');
+    updatePctToggleVisibility();
     if (currentData) {
       $('resultsCard').style.display    = tab === 'song'   ? 'block' : 'none';
       $('artResultsCard').style.display = tab === 'artist' ? 'block' : 'none';
@@ -603,6 +614,7 @@
   }
 
   renderPresets();
+  updatePctToggleVisibility();
 
   $('presetName').addEventListener('keydown', e => { if (e.key === 'Enter') $('presetId').focus(); });
   $('presetId').addEventListener('keydown',   e => { if (e.key === 'Enter') addPreset(); });
@@ -643,7 +655,14 @@
   }
 
   function rerenderIfLoaded() {
+    updatePctToggleVisibility();
     if (currentData) { renderResults(); renderArtistResults(); }
+  }
+
+  function updatePctToggleVisibility() {
+    const neverCorrect = $('neverCorrect').checked;
+    $('pctToggleRow').style.display = !neverCorrect ? 'flex' : 'none';
+    if (neverCorrect) $('pctMode').checked = false;
   }
 
   let songsData = null;
@@ -670,8 +689,27 @@
 
   async function renderResults() {
     const neverCorrect = $('neverCorrect').checked;
+    const pctMode = !neverCorrect && $('pctMode').checked;
     const limit = Math.min(parseInt($('limitVal').value) || 100, 100);
-    const rows  = (neverCorrect ? currentData.never_correct : currentData.incorrect).slice(0, limit);
+
+    let rows;
+    if (pctMode) {
+      const base = (neverCorrect ? currentData.pct_never_correct : currentData.pct_incorrect);
+      if (base && base.length) {
+        // Use precomputed pct dataset
+        rows = base.filter(r => r.total >= 10 && r.instances > 0 && r.instances < r.total).slice(0, limit);
+      } else {
+        // Fallback: compute from incorrect data (old JSONs without pct fields)
+        const src = (neverCorrect ? currentData.never_correct : currentData.incorrect);
+        rows = src
+          .filter(r => r.total >= 10 && r.instances > 0 && r.instances < r.total)
+          .slice()
+          .sort((a, b) => (b.instances / b.total) - (a.instances / a.total))
+          .slice(0, limit);
+      }
+    } else {
+      rows = (neverCorrect ? currentData.never_correct : currentData.incorrect).slice(0, limit);
+    }
 
     const presets = loadPresets();
     const preset  = presets.find(p => p.id === currentData.player_id);
@@ -679,12 +717,15 @@
 
     $('resultsMeta').textContent =
       `${label} · ${rows.length} result${rows.length !== 1 ? 's' : ''}` +
-      (neverCorrect ? ' · never correct only' : '');
+      (neverCorrect ? ' · never correct only' : '') +
+      (pctMode ? ' · sorted by %' : '');
     $('resultsMeta').className = 'results-meta on';
 
     $('tbody').innerHTML = rows.length === 0
       ? `<tr><td colspan="5" class="empty">No results found.</td></tr>`
-      : rows.map(({ music_id, instances, total }, i) => `
+      : rows.map(({ music_id, instances, total }, i) => {
+          const pct = total > 0 ? Math.round((instances / total) * 100) : 0;
+          return `
           <tr>
             <td class="rank">${i + 1}</td>
             <td class="mid"><a href="https://erogemusicquiz.com/em${music_id}" target="_blank" rel="noopener">${music_id}</a></td>
@@ -694,14 +735,15 @@
             <td class="count">
               <div class="bar-wrap">
                 <span style="color:#e05252">${instances}</span><span style="color:var(--text-dim)">/${total}</span>
+                ${pctMode ? `<span style="color:var(--text-muted);font-size:0.75rem;margin-left:2px">(${pct}%)</span>` : ''}
                 <div style="display:flex;height:6px;border-radius:99px;overflow:hidden;width:60px;background:var(--border)">
-                  <div style="width:${Math.round((instances / total) * 100)}%;background:#e05252"></div>
+                  <div style="width:${pct}%;background:#e05252"></div>
                   <div style="flex:1;background:#4caf7d"></div>
                 </div>
               </div>
             </td>
-          </tr>`
-        ).join('');
+          </tr>`;
+        }).join('');
 
     $('resultsCard').style.display = activeTab === 'song' ? 'block' : 'none';
     setStatus('Done.', 'ok');
@@ -745,8 +787,21 @@
   async function renderArtistResults() {
     if (!currentData) return;
     const neverCorrect = $('neverCorrect').checked;
+    const pctMode = !neverCorrect && $('pctMode').checked;
     const limit = Math.min(parseInt($('limitVal').value) || 100, 100);
-    const rows  = (neverCorrect ? currentData.art_never_correct : currentData.art_incorrect).slice(0, limit);
+
+    let rows = (neverCorrect ? currentData.art_never_correct : currentData.art_incorrect);
+
+    if (pctMode) {
+      // Filter: 10+ total guesses, non-zero incorrect rate, then sort by % desc
+      rows = rows
+        .filter(r => r.total >= 10 && r.instances > 0)
+        .map(r => ({ ...r, pct: r.instances / r.total }))
+        .sort((a, b) => b.pct - a.pct)
+        .slice(0, limit);
+    } else {
+      rows = rows.slice(0, limit);
+    }
 
     const presets = loadPresets();
     const preset  = presets.find(p => p.id === currentData.player_id);
@@ -754,12 +809,15 @@
 
     $('artResultsMeta').textContent =
       `${label} · ${rows.length} result${rows.length !== 1 ? 's' : ''} · artist guesses` +
-      (neverCorrect ? ' · never correct only' : '');
+      (neverCorrect ? ' · never correct only' : '') +
+      (pctMode ? ' · sorted by %' : '');
     $('artResultsMeta').className = 'results-meta on';
 
     $('artTbody').innerHTML = rows.length === 0
       ? `<tr><td colspan="4" class="empty">No artist guess data found.</td></tr>`
-      : rows.map(({ artist_id, name, instances, total }, i) => `
+      : rows.map(({ artist_id, name, instances, total }, i) => {
+          const pct = total > 0 ? Math.round((instances / total) * 100) : 0;
+          return `
           <tr>
             <td class="rank">${i + 1}</td>
             <td class="mid"><a href="https://erogemusicquiz.com/ea${artist_id}" target="_blank" rel="noopener">${artist_id}</a></td>
@@ -767,14 +825,15 @@
             <td class="count">
               <div class="bar-wrap">
                 <span style="color:#e05252">${instances}</span><span style="color:var(--text-dim)">/${total}</span>
+                ${pctMode ? `<span style="color:var(--text-muted);font-size:0.75rem;margin-left:2px">(${pct}%)</span>` : ''}
                 <div style="display:flex;height:6px;border-radius:99px;overflow:hidden;width:60px;background:var(--border)">
-                  <div style="width:${Math.round((instances / total) * 100)}%;background:#e05252"></div>
+                  <div style="width:${pct}%;background:#e05252"></div>
                   <div style="flex:1;background:#4caf7d"></div>
                 </div>
               </div>
             </td>
-          </tr>`
-        ).join('');
+          </tr>`;
+        }).join('');
 
     // Always render data; visibility is controlled by switchTab and the search flow
     $('artResultsCard').style.display = activeTab === 'artist' ? 'block' : 'none';

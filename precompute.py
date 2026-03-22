@@ -212,6 +212,20 @@ def precompute(input_path: str, out_dir: str, limit: int, am_path: str, aa_path:
             if mid not in cor
         ][:limit]
 
+        # % mode datasets: min 10 total guesses, non-zero and non-100% incorrect rate, sorted by rate desc
+        pct_incorrect = sorted(
+            [{"music_id": mid, "instances": cnt, "total": total_guesses[user_id][mid]}
+             for mid, cnt in inc.items()
+             if total_guesses[user_id][mid] >= 10 and 0 < cnt < total_guesses[user_id][mid]],
+            key=lambda e: e["instances"] / e["total"], reverse=True
+        )[:limit]
+        pct_never_correct = sorted(
+            [{"music_id": mid, "instances": cnt, "total": total_guesses[user_id][mid]}
+             for mid, cnt in inc.items()
+             if mid not in cor and total_guesses[user_id][mid] >= 10 and 0 < cnt < total_guesses[user_id][mid]],
+            key=lambda e: e["instances"] / e["total"], reverse=True
+        )[:limit]
+
         # Artist guess stats — keyed by artist_id
         art_inc = art_incorrect[user_id]
         art_cor = art_correct.get(user_id, set())
@@ -230,6 +244,8 @@ def precompute(input_path: str, out_dir: str, limit: int, am_path: str, aa_path:
             "player_id":         user_id,
             "incorrect":         all_incorrect,
             "never_correct":     never_correct,
+            "pct_incorrect":     pct_incorrect,
+            "pct_never_correct": pct_never_correct,
             "art_incorrect":     all_art_incorrect,
             "art_never_correct": art_never_correct,
         }

@@ -795,7 +795,7 @@
     if (pctMode) {
       // Filter: 10+ total guesses, non-zero incorrect rate, then sort by % desc
       rows = rows
-        .filter(r => r.total >= 10 && r.instances > 0)
+        .filter(r => r.total >= 10 && r.instances > 0 && r.instances < r.total)
         .map(r => ({ ...r, pct: r.instances / r.total }))
         .sort((a, b) => b.pct - a.pct)
         .slice(0, limit);

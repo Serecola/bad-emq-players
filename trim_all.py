@@ -22,8 +22,15 @@ EXTRACTS = [
         "start": "COPY public.music_source_external_link (music_source_id, url, type, name) FROM stdin;",
         "output": "music_source_external_link_dump.txt",
     },
+        {
+        "start": "COPY public.artist_alias (id, artist_id, latin_alias, non_latin_alias, is_main_name) FROM stdin;",
+        "output": "artist_alias_dump.txt",
+    },
+        {
+        "start": "COPY public.artist_music (artist_id, music_id, role, artist_alias_id) FROM stdin;",
+        "output": "artist_music_dump.txt",
+    },
 ]
-
 
 def find_end(content, start_idx):
     """Find the index of the first standalone \\. line after start_idx."""

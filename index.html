@@ -457,7 +457,7 @@
           <span class="knob"></span>
         </label>
         <span class="toggle-label" onclick="document.getElementById('pctMode').click()">
-          Sort by incorrect % (min. 10 guesses, excludes 100% incorrect rate)
+          Sort by incorrect % (min. 10 guesses, excludes 0% rate)
         </span>
       </div>
     </div>
@@ -474,7 +474,10 @@
     </div>
 
     <div class="card" id="resultsCard" style="display:none">
-      <div class="results-meta" id="resultsMeta"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:4px">
+        <div class="results-meta" id="resultsMeta" style="margin-bottom:0"></div>
+        <button class="btn" id="copyBtn" onclick="copyMusicIds()" style="font-size:0.75rem;padding:5px 12px;flex-shrink:0">Copy IDs</button>
+      </div>
       <table>
         <thead>
           <tr>
@@ -837,6 +840,33 @@
 
     // Always render data; visibility is controlled by switchTab and the search flow
     $('artResultsCard').style.display = activeTab === 'artist' ? 'block' : 'none';
+  }
+
+  function copyMusicIds() {
+    if (!currentData) return;
+    const neverCorrect = $('neverCorrect').checked;
+    const pctMode = !neverCorrect && $('pctMode').checked;
+    const limit = Math.min(parseInt($('limitVal').value) || 100, 100);
+    let rows;
+    if (pctMode) {
+      const base = (neverCorrect ? currentData.pct_never_correct : currentData.pct_incorrect);
+      if (base && base.length) {
+        rows = base.filter(r => r.total >= 10 && r.instances > 0 && r.instances < r.total).slice(0, limit);
+      } else {
+        const src = (neverCorrect ? currentData.never_correct : currentData.incorrect);
+        rows = src.filter(r => r.total >= 10 && r.instances > 0 && r.instances < r.total)
+          .slice().sort((a, b) => (b.instances / b.total) - (a.instances / a.total)).slice(0, limit);
+      }
+    } else {
+      rows = (neverCorrect ? currentData.never_correct : currentData.incorrect).slice(0, limit);
+    }
+    const ids = rows.map(r => r.music_id).join(', ');
+    navigator.clipboard.writeText(ids).then(() => {
+      const btn = $('copyBtn');
+      const orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = orig; }, 1500);
+    });
   }
 
   $('playerId').addEventListener('keydown', e => { if (e.key === 'Enter') runQuery(); });

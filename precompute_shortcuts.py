@@ -5,6 +5,15 @@ import unicodedata
 from collections import defaultdict
 
 # ==========================================
+# 0. BLACKLISTED CHARACTERS (untypable in dropdown)
+# ==========================================
+# The dropdown cannot accept these characters, so no shortcut may span
+# across them.  We split the normalized string at every position where a
+# blacklisted character appeared and generate substrings only within each
+# resulting segment.
+BLACKLISTED_CHARS = set('δΔκΚνΝοΟπΠσΣψΨχΧ')
+
+# ==========================================
 # 1. CUSTOM REPLACEMENT MAP
 # ==========================================
 CHAR_REPLACEMENTS = {
@@ -40,15 +49,46 @@ CHAR_REPLACEMENTS = {
     'ö': 'o',
 }
 
-def normalize(s):
-    """Apply replacements, decompose accents, strip non-alnum, lowercase."""
+def normalize_segments(s):
+    """
+    Apply replacements, decompose accents, then return a list of alnum
+    segments split at any blacklisted character.
+
+    Each segment is a contiguous run of typable characters.  No shortcut
+    may bridge two segments because the character between them cannot be
+    typed in the dropdown.
+
+    Returns a list of non-empty lowercase strings.
+    """
     if not s or s == r'\N':
-        return ''
+        return []
     for orig, repl in CHAR_REPLACEMENTS.items():
         s = s.replace(orig, repl)
     s = unicodedata.normalize('NFKD', s)
-    s = ''.join(c for c in s if not unicodedata.combining(c) and c.isalnum())
-    return s.lower()
+
+    segments = []
+    current = []
+    for c in s:
+        if unicodedata.combining(c):
+            continue
+        cl = c.lower()
+        if cl in BLACKLISTED_CHARS or c in BLACKLISTED_CHARS:
+            # Blacklisted – flush current segment and start fresh
+            if current:
+                segments.append(''.join(current))
+                current = []
+        elif c.isalnum():
+            current.append(cl)
+        # Non-alnum, non-blacklisted (spaces, punctuation) are simply dropped
+        # but do NOT split segments – only blacklisted chars split segments.
+    if current:
+        segments.append(''.join(current))
+
+    return [seg for seg in segments if seg]
+
+def normalize(s):
+    """Convenience wrapper – returns the joined form (for sort key use only)."""
+    return ''.join(normalize_segments(s))
 
 def custom_sort_key(s):
     """Sort priority: spaces(0) > symbols(1) > numbers(2) > letters(3)"""
@@ -88,15 +128,17 @@ def solve():
                 if latin == r'\N' or not latin:
                     continue
 
-                norm = normalize(latin)
-                if not norm:
+                segments = normalize_segments(latin)
+                if not segments:
                     continue
+                norm = ''.join(segments)  # joined form used only for sort key
 
                 all_entries.append({
                     'sid': sid,
                     'latin': latin,
                     'lang': lang,
-                    'norm': norm
+                    'norm': norm,
+                    'segments': segments,
                 })
     except FileNotFoundError:
         print(f"Error: {input_file} not found.")
@@ -120,26 +162,41 @@ def solve():
     infix_winners = {}
 
     for entry in all_entries:
-        norm = entry['norm']
+        segments = entry['segments']
         sid = entry['sid']
 
-        # 1. Prefix matches ALWAYS rank first in dropdowns
-        for L in range(1, min(21, len(norm) + 1)):
-            sub = norm[:L]
-            if sub not in prefix_winners:
-                prefix_winners[sub] = sid
+        for seg_idx, seg in enumerate(segments):
+            is_first_seg = (seg_idx == 0)
 
-        # 2. Infix matches rank second (only if no prefix winner exists)
-        #    Track the FIRST infix match per substring according to sort order.
-        seen_infix = set()
-        for i in range(1, len(norm)):  # start at 1 to skip prefixes
-            for L in range(1, min(21, len(norm) - i + 1)):
-                sub = norm[i:i+L]
-                if sub in seen_infix:
-                    continue
-                seen_infix.add(sub)
-                if sub not in infix_winners:
-                    infix_winners[sub] = sid
+            if is_first_seg:
+                # 1. Prefix matches from the first segment rank first in dropdowns
+                for L in range(1, min(21, len(seg) + 1)):
+                    sub = seg[:L]
+                    if sub not in prefix_winners:
+                        prefix_winners[sub] = sid
+
+                # 2. Infix matches within the first segment rank second
+                seen_infix = set()
+                for i in range(1, len(seg)):
+                    for L in range(1, min(21, len(seg) - i + 1)):
+                        sub = seg[i:i+L]
+                        if sub in seen_infix:
+                            continue
+                        seen_infix.add(sub)
+                        if sub not in infix_winners:
+                            infix_winners[sub] = sid
+            else:
+                # Non-first segments (came after a blacklisted char) are never
+                # a prefix of the title — all their substrings are infix matches.
+                seen_infix = set()
+                for i in range(len(seg)):
+                    for L in range(1, min(21, len(seg) - i + 1)):
+                        sub = seg[i:i+L]
+                        if sub in seen_infix:
+                            continue
+                        seen_infix.add(sub)
+                        if sub not in infix_winners:
+                            infix_winners[sub] = sid
 
     print(f"Map built. Prefix winners: {len(prefix_winners)}, Infix winners: {len(infix_winners)}")
 
@@ -170,21 +227,23 @@ def solve():
         for L in range(1, 21):
             current_len_shortcuts = set()
             for entry in ja_en_entries:
-                norm = entry['norm']
-                if len(norm) < L:
-                    continue
+                segments = entry['segments']
 
-                seen_subs = set()
-                for i in range(len(norm) - L + 1):
-                    sub = norm[i:i+L]
-                    if sub in seen_subs:
+                for seg in segments:
+                    if len(seg) < L:
                         continue
-                    seen_subs.add(sub)
 
-                    # Determine who actually wins this substring in the UI
-                    actual_winner = prefix_winners.get(sub, infix_winners.get(sub))
-                    if actual_winner == sid:
-                        current_len_shortcuts.add(sub)
+                    seen_subs = set()
+                    for i in range(len(seg) - L + 1):
+                        sub = seg[i:i+L]
+                        if sub in seen_subs:
+                            continue
+                        seen_subs.add(sub)
+
+                        # Determine who actually wins this substring in the UI
+                        actual_winner = prefix_winners.get(sub, infix_winners.get(sub))
+                        if actual_winner == sid:
+                            current_len_shortcuts.add(sub)
 
             if current_len_shortcuts:
                 all_valid_shortcuts = current_len_shortcuts

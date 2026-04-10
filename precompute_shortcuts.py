@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 import json
 import unicodedata
 from collections import defaultdict
@@ -133,12 +134,25 @@ def solve():
                     continue
                 norm = ''.join(segments)  # joined form used only for sort key
 
+                # Words: split the original latin on whitespace, normalize each
+                # token individually, drop empties and blacklisted-only tokens.
+                # A "word" here is whatever the user would type as one unbroken
+                # token — we only keep tokens that survive normalization intact
+                # (i.e. contain no blacklisted char that would split them).
+                raw_words = re.split(r'[\s\-_/☆★·•]+', latin)
+                words = []
+                for w in raw_words:
+                    w_segs = normalize_segments(w)
+                    if len(w_segs) == 1:   # exactly one segment = no blacklisted split
+                        words.append(w_segs[0])
+
                 all_entries.append({
                     'sid': sid,
                     'latin': latin,
                     'lang': lang,
                     'norm': norm,
                     'segments': segments,
+                    'words': words,
                 })
     except FileNotFoundError:
         print(f"Error: {input_file} not found.")
@@ -254,11 +268,40 @@ def solve():
             final_shortcuts = sorted(list(all_valid_shortcuts))[:5]
             vn_id_val = int(sid) if sid.isdigit() else sid
 
+            # ---- shortcuts_words: whole words that make this title win ----
+            # Only generate word shortcuts if the title has more than one word
+            title_to_check = jp_latin_title if jp_latin_title else en_latin_title
+            word_count = len(title_to_check.split()) if title_to_check else 0
+            
+            word_shortcuts = None  # Default to None
+            if word_count > 1:  # Only proceed if there are multiple words
+                # Collect every normalized word across all ja/en entries, dedupe,
+                # then keep only those where the whole word is itself a winning
+                # shortcut (prefix or infix winner == sid).
+                seen_words = set()
+                word_shortcuts_list = []
+                for entry in ja_en_entries:
+                    for w in entry.get('words', []):
+                        if w in seen_words or not w:
+                            continue
+                        seen_words.add(w)
+                        actual_winner = prefix_winners.get(w, infix_winners.get(w))
+                        if actual_winner == sid:
+                            # Only add if this word is NOT already in final_shortcuts
+                            if w not in final_shortcuts:
+                                word_shortcuts_list.append(w)
+                        if len(word_shortcuts_list) == 2:
+                            break
+                    if len(word_shortcuts_list) == 2:
+                        break
+                word_shortcuts = sorted(word_shortcuts_list)[:2] if word_shortcuts_list else None
+
             results.append({
                 "vn_id": vn_id_val,
                 "jp_latin_title": jp_latin_title,
                 "en_latin_title": en_latin_title,
-                "shortcuts": final_shortcuts
+                "shortcuts": final_shortcuts,
+                "shortcuts_words": word_shortcuts,
             })
             processed_ids += 1
 

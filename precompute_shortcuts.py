@@ -8,9 +8,36 @@ from collections import defaultdict
 # 1. CUSTOM REPLACEMENT MAP
 # ==========================================
 CHAR_REPLACEMENTS = {
-    'μ': 'myu', 'µ': 'myu', 'ß': 'ss', 'ø': 'oe', 'æ': 'ae', 'œ': 'oe',
-    'ć': 'c', 'č': 'c', 'đ': 'd', 'š': 's', 'ž': 'z', 'ñ': 'n',
-    'ü': 'u', 'ä': 'a', 'ö': 'o',
+    # Multi-character replacements
+    'Rë∀˥': 'Real',
+    'βίος': 'Bios',
+    
+    # Single-character replacements
+    '√': 'root',
+    'α': 'a',
+    'Λ': 'A',
+    '∀': 'A',
+    'μ': 'myu',
+    'µ': 'myu',
+    'φ': 'o',
+    'Ω': '', 
+    'Я': 'R',
+    '×': 'x',
+    '∃': 'E',
+    'γ': 'y',
+    'ß': 'ss',
+    'ø': 'oe',
+    'æ': 'ae',
+    'œ': 'oe',
+    'ć': 'c',
+    'č': 'c',
+    'đ': 'd',
+    'š': 's',
+    'ž': 'z',
+    'ñ': 'n',
+    'ü': 'u',
+    'ä': 'a',
+    'ö': 'o',
 }
 
 def normalize(s):

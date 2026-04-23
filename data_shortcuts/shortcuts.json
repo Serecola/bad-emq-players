@@ -62622,9 +62622,7 @@
     "shortcuts": [
       "huta"
     ],
-    "shortcuts_words": [
-      "yuuri"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 5506,
@@ -80833,7 +80831,7 @@
       "iuw"
     ],
     "shortcuts_words": [
-      "itsuwari",
+      "genba",
       "seibo"
     ]
   },
@@ -84954,6 +84952,48 @@
     "en_latin_title": "Bunny Garden 2",
     "shortcuts": [
       "nyg"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7443,
+    "jp_latin_title": "Itsuwari no Alkanet",
+    "en_latin_title": null,
+    "shortcuts": [
+      "oalk"
+    ],
+    "shortcuts_words": [
+      "alkanet",
+      "itsuwari"
+    ]
+  },
+  {
+    "vn_id": 7444,
+    "jp_latin_title": "Yuuri to Marin wa Iyashite Agetai",
+    "en_latin_title": null,
+    "shortcuts": [
+      "rinw"
+    ],
+    "shortcuts_words": [
+      "yuuri"
+    ]
+  },
+  {
+    "vn_id": 7445,
+    "jp_latin_title": "Oshino Ruka wa Iyashite Agetai",
+    "en_latin_title": null,
+    "shortcuts": [
+      "awaiy",
+      "noruk"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7449,
+    "jp_latin_title": "Alt.",
+    "en_latin_title": null,
+    "shortcuts": [
+      "alt"
     ],
     "shortcuts_words": null
   }

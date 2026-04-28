@@ -4081,8 +4081,7 @@
     "jp_latin_title": "Colorful Aquarium",
     "en_latin_title": null,
     "shortcuts": [
-      "laq",
-      "ula"
+      "laq"
     ],
     "shortcuts_words": [
       "colorful"
@@ -5856,7 +5855,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "etaru",
-      "gamik",
       "mikik"
     ],
     "shortcuts_words": [
@@ -6145,8 +6143,7 @@
     "en_latin_title": null,
     "shortcuts": [
       "fin",
-      "oac",
-      "ppr"
+      "oac"
     ],
     "shortcuts_words": [
       "approach",
@@ -17941,7 +17938,6 @@
     "jp_latin_title": "Kurogane no Tsubasa ~The Alchemist's Story~",
     "en_latin_title": null,
     "shortcuts": [
-      "ealc",
       "ists",
       "sath",
       "stss",
@@ -18781,8 +18777,7 @@
     "jp_latin_title": "Immoral",
     "en_latin_title": null,
     "shortcuts": [
-      "imm",
-      "mmo"
+      "imm"
     ],
     "shortcuts_words": null
   },
@@ -20463,8 +20458,8 @@
       "erumo",
       "isune",
       "nisun",
-      "rerum",
-      "rumor"
+      "rumor",
+      "unemu"
     ],
     "shortcuts_words": null
   },
@@ -21634,7 +21629,10 @@
     "jp_latin_title": "Hime to Majin to Koi Suru Tamashii",
     "en_latin_title": null,
     "shortcuts": [
-      "urut"
+      "ajint",
+      "intok",
+      "surut",
+      "uruta"
     ],
     "shortcuts_words": null
   },
@@ -27767,10 +27765,10 @@
     "en_latin_title": null,
     "shortcuts": [
       "adel",
-      "ceof",
       "deri",
       "eofs",
-      "eriv"
+      "eriv",
+      "fstr"
     ],
     "shortcuts_words": [
       "deliverance",
@@ -28412,7 +28410,9 @@
     "jp_latin_title": "Maid no Yakata ~Zetsubou Hen~",
     "en_latin_title": null,
     "shortcuts": [
-      "idn"
+      "ataz",
+      "dnoy",
+      "idno"
     ],
     "shortcuts_words": null
   },
@@ -28892,8 +28892,8 @@
       "nfo"
     ],
     "shortcuts_words": [
-      "momoko",
-      "yubiwa"
+      "kometa",
+      "momoko"
     ]
   },
   {
@@ -33861,7 +33861,7 @@
       "efi",
       "fix",
       "ixt",
-      "rro"
+      "utu"
     ],
     "shortcuts_words": [
       "arrows",
@@ -37505,8 +37505,8 @@
       "lkr"
     ],
     "shortcuts_words": [
-      "atelier",
-      "elkrone"
+      "elkrone",
+      "otomate"
     ]
   },
   {
@@ -40066,8 +40066,8 @@
       "2mid",
       "dnig",
       "hou2",
-      "idni",
-      "midn"
+      "midn",
+      "ou2m"
     ],
     "shortcuts_words": [
       "midnight"
@@ -41226,7 +41226,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "3in",
-      "hi3",
       "i3i"
     ],
     "shortcuts_words": [
@@ -47675,7 +47674,6 @@
     "shortcuts": [
       "iveh",
       "resp",
-      "ruth",
       "veha"
     ],
     "shortcuts_words": [
@@ -48274,8 +48272,7 @@
     "shortcuts": [
       "famn",
       "mano",
-      "ofam",
-      "rofa"
+      "ofam"
     ],
     "shortcuts_words": [
       "manor"
@@ -49368,7 +49365,6 @@
     "jp_latin_title": "Hime-sama Love Life!",
     "en_latin_title": null,
     "shortcuts": [
-      "amal",
       "malo"
     ],
     "shortcuts_words": null
@@ -56977,9 +56973,9 @@
     "shortcuts": [
       "asp",
       "byt",
-      "dwa",
       "dye",
-      "kie"
+      "kie",
+      "ldw"
     ],
     "shortcuts_words": [
       "kieta",
@@ -58771,7 +58767,8 @@
     "jp_latin_title": "Totsugeki☆Love Heart",
     "en_latin_title": null,
     "shortcuts": [
-      "tot"
+      "tots",
+      "vehe"
     ],
     "shortcuts_words": [
       "totsugeki"
@@ -60875,7 +60872,7 @@
     ],
     "shortcuts_words": [
       "chikan",
-      "otori"
+      "sousakan"
     ]
   },
   {
@@ -62207,7 +62204,6 @@
     "jp_latin_title": "Happy End ni Hana o Soete",
     "en_latin_title": null,
     "shortcuts": [
-      "dni",
       "pye",
       "soe"
     ],
@@ -63348,7 +63344,6 @@
     "jp_latin_title": "Café Stella to Shinigami no Chou",
     "en_latin_title": "Café Stella and the Reapers' Butterflies",
     "shortcuts": [
-      "eap",
       "laa",
       "sbu"
     ],
@@ -63974,7 +63969,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "aunm",
-      "iinv",
       "naun",
       "osuu"
     ],
@@ -64161,9 +64155,9 @@
     "shortcuts": [
       "ictu",
       "pict",
-      "rals",
       "rytw",
-      "twei"
+      "twei",
+      "ytwe"
     ],
     "shortcuts_words": [
       "pictural"
@@ -65913,7 +65907,6 @@
     "shortcuts": [
       "juse",
       "mame",
-      "otoj",
       "suhi",
       "toju"
     ],
@@ -73831,11 +73824,9 @@
     "shortcuts": [
       "goap",
       "icia",
-      "plen",
-      "pren"
+      "plen"
     ],
     "shortcuts_words": [
-      "apprentice",
       "magician"
     ]
   },
@@ -74019,14 +74010,9 @@
     "en_latin_title": null,
     "shortcuts": [
       "2ke",
-      "hay",
-      "i2k",
-      "iij"
+      "i2k"
     ],
-    "shortcuts_words": [
-      "hayarigami",
-      "keishichou"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 6489,
@@ -74419,9 +74405,9 @@
     "shortcuts": [
       "andb",
       "dbla",
-      "ierr",
       "ndbl",
-      "nier"
+      "nier",
+      "rrep"
     ],
     "shortcuts_words": [
       "replicant"
@@ -76648,7 +76634,9 @@
     "jp_latin_title": "Singularity of Girl",
     "en_latin_title": null,
     "shortcuts": [
-      "gul"
+      "sing",
+      "tyof",
+      "yofg"
     ],
     "shortcuts_words": [
       "singularity"
@@ -80491,12 +80479,11 @@
     "jp_latin_title": "Reijuu no Seifuku",
     "en_latin_title": null,
     "shortcuts": [
-      "eijuu",
-      "reiju"
+      "ijuunos",
+      "juunose",
+      "uunosei"
     ],
-    "shortcuts_words": [
-      "reijuu"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 7045,
@@ -80854,9 +80841,7 @@
     "shortcuts": [
       "2ot"
     ],
-    "shortcuts_words": [
-      "amayakasareru"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 7076,
@@ -83657,8 +83642,8 @@
       "eanim",
       "heani",
       "imati",
-      "ithea",
-      "matio"
+      "matio",
+      "nimat"
     ],
     "shortcuts_words": [
       "animation"
@@ -84682,8 +84667,7 @@
     "en_latin_title": null,
     "shortcuts": [
       "eiby",
-      "rseg",
-      "rsei"
+      "rseg"
     ],
     "shortcuts_words": [
       "sakusei",
@@ -84989,6 +84973,40 @@
     "shortcuts_words": null
   },
   {
+    "vn_id": 7446,
+    "jp_latin_title": "Lovecha ~Tsumasakidachi de, Hitomi o Tojite~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "otoj"
+    ],
+    "shortcuts_words": [
+      "lovecha",
+      "tsumasakidachi"
+    ]
+  },
+  {
+    "vn_id": 7447,
+    "jp_latin_title": "Hayarigami - Keishichou Kaii Jiken File",
+    "en_latin_title": null,
+    "shortcuts": [
+      "hay",
+      "iij"
+    ],
+    "shortcuts_words": [
+      "hayarigami",
+      "keishichou"
+    ]
+  },
+  {
+    "vn_id": 7448,
+    "jp_latin_title": "Shin Hayarigami 2",
+    "en_latin_title": null,
+    "shortcuts": [
+      "nhay"
+    ],
+    "shortcuts_words": null
+  },
+  {
     "vn_id": 7449,
     "jp_latin_title": "Alt.",
     "en_latin_title": null,
@@ -84996,5 +85014,151 @@
       "alt"
     ],
     "shortcuts_words": null
+  },
+  {
+    "vn_id": 7450,
+    "jp_latin_title": "Gohoushi Maid wa Ecchi na Onee-san ~Ore Dake no Kyonyuu Maid ni Tappuri Amayakasareru Mecha Ero Goshujin-sama Life~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "dni",
+      "dwa",
+      "idn",
+      "idw"
+    ],
+    "shortcuts_words": [
+      "amayakasareru"
+    ]
+  },
+  {
+    "vn_id": 7451,
+    "jp_latin_title": "Karakoi Invitation",
+    "en_latin_title": null,
+    "shortcuts": [
+      "iinv",
+      "nvit"
+    ],
+    "shortcuts_words": [
+      "invitation",
+      "karakoi"
+    ]
+  },
+  {
+    "vn_id": 7452,
+    "jp_latin_title": "Reijuu no Acolyte Lufia",
+    "en_latin_title": null,
+    "shortcuts": [
+      "coly",
+      "eluf",
+      "lufi",
+      "lyte",
+      "noac"
+    ],
+    "shortcuts_words": [
+      "acolyte",
+      "reijuu"
+    ]
+  },
+  {
+    "vn_id": 7453,
+    "jp_latin_title": "Yamiyo no PARENTE: Genrin no Kishougun Remastered",
+    "en_latin_title": null,
+    "shortcuts": [
+      "gunr",
+      "tege"
+    ],
+    "shortcuts_words": [
+      "parente",
+      "remastered"
+    ]
+  },
+  {
+    "vn_id": 7454,
+    "jp_latin_title": "CHAOS∞VERSE ~Immoral Singularity~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "gul",
+      "lar",
+      "mmo",
+      "osv",
+      "sve"
+    ],
+    "shortcuts_words": [
+      "chaosverse"
+    ]
+  },
+  {
+    "vn_id": 7455,
+    "jp_latin_title": "Tensei shitara Ken deshita",
+    "en_latin_title": null,
+    "shortcuts": [
+      "akend"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7456,
+    "jp_latin_title": "RE:LOADED CARMINE",
+    "en_latin_title": null,
+    "shortcuts": [
+      "carm",
+      "dedc",
+      "edca",
+      "relo"
+    ],
+    "shortcuts_words": [
+      "carmine",
+      "reloaded"
+    ]
+  },
+  {
+    "vn_id": 7457,
+    "jp_latin_title": "Atelier Rorona: The Alchemist of Arland",
+    "en_latin_title": null,
+    "shortcuts": [
+      "ror",
+      "rro"
+    ],
+    "shortcuts_words": [
+      "rorona"
+    ]
+  },
+  {
+    "vn_id": 7458,
+    "jp_latin_title": "Atelier Totori: The Adventurer of Arland",
+    "en_latin_title": null,
+    "shortcuts": [
+      "tot"
+    ],
+    "shortcuts_words": [
+      "adventurer",
+      "totori"
+    ]
+  },
+  {
+    "vn_id": 7459,
+    "jp_latin_title": "Atelier Meruru: The Apprentice of Arland",
+    "en_latin_title": null,
+    "shortcuts": [
+      "ate",
+      "eap",
+      "hi3",
+      "ppr",
+      "uth"
+    ],
+    "shortcuts_words": [
+      "atelier",
+      "meruru"
+    ]
+  },
+  {
+    "vn_id": 7460,
+    "jp_latin_title": "Glass-hime no Yubiwa",
+    "en_latin_title": null,
+    "shortcuts": [
+      "ubiw"
+    ],
+    "shortcuts_words": [
+      "yubiwa"
+    ]
   }
 ]

@@ -5866,7 +5866,7 @@
     "jp_latin_title": "Koisuru Otome ~Shikigami 2008~",
     "en_latin_title": null,
     "shortcuts": [
-      "008"
+      "08"
     ],
     "shortcuts_words": [
       "2008"
@@ -6295,7 +6295,10 @@
     "jp_latin_title": "Genmukan ~Aiyoku to Ryoujoku no Inzai~",
     "en_latin_title": null,
     "shortcuts": [
-      "inz"
+      "genm",
+      "inza",
+      "nmuk",
+      "oinz"
     ],
     "shortcuts_words": [
       "genmukan",
@@ -11096,7 +11099,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "kitt",
-      "osum",
       "royo",
       "sair"
     ],
@@ -13177,7 +13179,6 @@
     "jp_latin_title": "Bengarachou Hakubutsushi",
     "en_latin_title": null,
     "shortcuts": [
-      "ben",
       "kub"
     ],
     "shortcuts_words": [
@@ -16119,7 +16120,7 @@
     "jp_latin_title": "Bukatsu Kikaku",
     "en_latin_title": null,
     "shortcuts": [
-      "buk"
+      "buka"
     ],
     "shortcuts_words": [
       "bukatsu",
@@ -16325,7 +16326,6 @@
     "jp_latin_title": "Kurenai no Namida",
     "en_latin_title": null,
     "shortcuts": [
-      "ainona",
       "nainon"
     ],
     "shortcuts_words": null
@@ -20293,7 +20293,6 @@
     "jp_latin_title": "Kokoro no Sumika",
     "en_latin_title": null,
     "shortcuts": [
-      "nosum",
       "sumik",
       "umika"
     ],
@@ -21620,7 +21619,7 @@
     "jp_latin_title": "Kokoro Navi",
     "en_latin_title": null,
     "shortcuts": [
-      "onav"
+      "ronav"
     ],
     "shortcuts_words": null
   },
@@ -24014,7 +24013,6 @@
     "jp_latin_title": "Shakugan no Shana",
     "en_latin_title": null,
     "shortcuts": [
-      "oshan",
       "shaku",
       "ugann"
     ],
@@ -27092,7 +27090,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "emym",
-      "hemy",
       "ialc",
       "ymei"
     ],
@@ -30344,7 +30341,6 @@
     "jp_latin_title": "Only One ~Sayaka Futari Dake no Kyuudoujou~",
     "en_latin_title": null,
     "shortcuts": [
-      "akaf",
       "douj",
       "esay",
       "kafu"
@@ -30719,6 +30715,7 @@
     "jp_latin_title": "Ren'ai 0 Kilometer",
     "en_latin_title": null,
     "shortcuts": [
+      "ai0",
       "i0k",
       "lom"
     ],
@@ -34949,7 +34946,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "eark",
-      "ticl",
       "vege"
     ],
     "shortcuts_words": [
@@ -40497,8 +40493,7 @@
     "jp_latin_title": "Tentama 2wins",
     "en_latin_title": null,
     "shortcuts": [
-      "2wi",
-      "a2w"
+      "2w"
     ],
     "shortcuts_words": [
       "2wins"
@@ -41100,10 +41095,10 @@
     "en_latin_title": null,
     "shortcuts": [
       "eal",
-      "kug",
       "lna",
       "nas",
-      "nzu"
+      "nzu",
+      "uga"
     ],
     "shortcuts_words": [
       "akabanzu",
@@ -49748,10 +49743,10 @@
     "en_latin_title": null,
     "shortcuts": [
       "gysan",
-      "ianth",
       "menky",
       "nmenk",
-      "riant"
+      "riant",
+      "ysanm"
     ],
     "shortcuts_words": [
       "sanmenkyou",
@@ -50650,10 +50645,10 @@
     "en_latin_title": "Sweet Young Bride ~Our Married Life Begins~",
     "shortcuts": [
       "deou",
-      "eety",
       "eour",
       "gbri",
-      "iedl"
+      "iedl",
+      "jofu"
     ],
     "shortcuts_words": [
       "begins",
@@ -50678,8 +50673,7 @@
     "jp_latin_title": null,
     "en_latin_title": "Mystic Messenger",
     "shortcuts": [
-      "icme",
-      "ysti"
+      "icme"
     ],
     "shortcuts_words": [
       "messenger",
@@ -50737,7 +50731,6 @@
     "jp_latin_title": "Hanikami Clover",
     "en_latin_title": null,
     "shortcuts": [
-      "iclo",
       "micl"
     ],
     "shortcuts_words": [
@@ -51373,7 +51366,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "ilk",
-      "kku",
       "lkk"
     ],
     "shortcuts_words": [
@@ -55409,7 +55401,6 @@
     "jp_latin_title": "Shotachin ni Aheru Kuro Gyaru ~Masegaki ka to Omotte ita no ni…~",
     "en_latin_title": null,
     "shortcuts": [
-      "heru",
       "niah"
     ],
     "shortcuts_words": [
@@ -55423,7 +55414,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "ikiz",
-      "izam",
       "jimo",
       "kiza",
       "uhad"
@@ -60813,7 +60803,8 @@
     "jp_latin_title": "Kokoro ga Tsunagu Koishirube",
     "en_latin_title": null,
     "shortcuts": [
-      "guk"
+      "aguk",
+      "guko"
     ],
     "shortcuts_words": [
       "koishirube",
@@ -61311,7 +61302,8 @@
     "jp_latin_title": "Knot Fiction!",
     "en_latin_title": null,
     "shortcuts": [
-      "otf"
+      "otfi",
+      "tfic"
     ],
     "shortcuts_words": null
   },
@@ -64044,11 +64036,7 @@
     "jp_latin_title": "Nagori-san wa Takane no Hana ni Narikirenai -Ren'ai Hensachi 0 no Shinrigaku-",
     "en_latin_title": "Nagori Rokudo Striving to be her ideal self -The inexperienced love life of a hard-to-get psychology lecturer-",
     "shortcuts": [
-      "beh",
-      "fah",
-      "gyl",
-      "hi0",
-      "i0n"
+      "i0"
     ],
     "shortcuts_words": [
       "nagori",
@@ -65223,10 +65211,14 @@
   },
   {
     "vn_id": 5727,
-    "jp_latin_title": "Sekai Metsubou Kyouyuu Gensou \"Mamiya\" -DownFall-",
+    "jp_latin_title": "Sekai Metsubou Kyouyuu Gensou Mamiya",
     "en_latin_title": "MAMIYA - A Shared Illusion of the World's End",
     "shortcuts": [
-      "wnf"
+      "ared",
+      "dill",
+      "edil",
+      "mami",
+      "yaas"
     ],
     "shortcuts_words": [
       "mamiya",
@@ -70478,8 +70470,7 @@
     "jp_latin_title": "Tobi DVine",
     "en_latin_title": null,
     "shortcuts": [
-      "idv",
-      "tob"
+      "idv"
     ],
     "shortcuts_words": [
       "tobi"
@@ -71294,8 +71285,7 @@
     "shortcuts": [
       "03l",
       "03t",
-      "3le",
-      "e03"
+      "3le"
     ],
     "shortcuts_words": [
       "leazas"
@@ -74825,7 +74815,6 @@
     "jp_latin_title": "Pure Cafe ~Iyashi no Cafe ni Kayoi Tsumeru, Boku no Chihou Tenkin Seikatsu~",
     "en_latin_title": null,
     "shortcuts": [
-      "afei",
       "feiy",
       "ocaf",
       "pure",
@@ -75465,7 +75454,6 @@
     "jp_latin_title": "Troisiamour",
     "en_latin_title": null,
     "shortcuts": [
-      "isia",
       "oisi"
     ],
     "shortcuts_words": null
@@ -75929,9 +75917,7 @@
       "dsom",
       "enha"
     ],
-    "shortcuts_words": [
-      "handsome"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 6657,
@@ -78265,7 +78251,6 @@
     "jp_latin_title": "Onee-chan no Sourou Kaizen Lesson ~Dashisugi ni Gochuui Yo♪~",
     "en_latin_title": null,
     "shortcuts": [
-      "igoc",
       "nles",
       "uiyo",
       "uuiy",
@@ -79041,7 +79026,11 @@
     "jp_latin_title": "Buddy Mission Bond",
     "en_latin_title": null,
     "shortcuts": [
-      "bu"
+      "bud",
+      "ddy",
+      "dym",
+      "onb",
+      "udd"
     ],
     "shortcuts_words": [
       "buddy"
@@ -80440,10 +80429,9 @@
   {
     "vn_id": 7041,
     "jp_latin_title": "Nandome ka no Hajimemashite",
-    "en_latin_title": null,
+    "en_latin_title": "NICE TO MEET YOU, AGAIN",
     "shortcuts": [
-      "dome",
-      "nand"
+      "nic"
     ],
     "shortcuts_words": [
       "hajimemashite",
@@ -80801,7 +80789,6 @@
     "jp_latin_title": "Toshi Densetsu Kaitai Center",
     "en_latin_title": "Urban Myth Dissolution Center",
     "shortcuts": [
-      "hdi",
       "tos",
       "urb"
     ],
@@ -82750,73 +82737,6 @@
     "shortcuts_words": null
   },
   {
-    "vn_id": 7243,
-    "jp_latin_title": "Houma Hunter Lime Dai 02 Wa",
-    "en_latin_title": null,
-    "shortcuts": [
-      "2w",
-      "i0"
-    ],
-    "shortcuts_words": null
-  },
-  {
-    "vn_id": 7244,
-    "jp_latin_title": "Houma Hunter Lime Dai 03 Wa",
-    "en_latin_title": null,
-    "shortcuts": [
-      "03"
-    ],
-    "shortcuts_words": null
-  },
-  {
-    "vn_id": 7245,
-    "jp_latin_title": "Houma Hunter Lime Dai 04 Wa",
-    "en_latin_title": null,
-    "shortcuts": [
-      "4w"
-    ],
-    "shortcuts_words": null
-  },
-  {
-    "vn_id": 7246,
-    "jp_latin_title": "Houma Hunter Lime Dai 05 Wa",
-    "en_latin_title": null,
-    "shortcuts": [
-      "5w"
-    ],
-    "shortcuts_words": null
-  },
-  {
-    "vn_id": 7247,
-    "jp_latin_title": "Houma Hunter Lime Dai 06 Wa",
-    "en_latin_title": null,
-    "shortcuts": [
-      "06",
-      "6w"
-    ],
-    "shortcuts_words": null
-  },
-  {
-    "vn_id": 7248,
-    "jp_latin_title": "Houma Hunter Lime Dai 07 Wa",
-    "en_latin_title": null,
-    "shortcuts": [
-      "07",
-      "7w"
-    ],
-    "shortcuts_words": null
-  },
-  {
-    "vn_id": 7249,
-    "jp_latin_title": "Houma Hunter Lime Dai 08 Wa",
-    "en_latin_title": null,
-    "shortcuts": [
-      "08",
-      "8w"
-    ],
-    "shortcuts_words": null
-  },
-  {
     "vn_id": 7250,
     "jp_latin_title": "Hoshi no Mahoroba",
     "en_latin_title": null,
@@ -84383,11 +84303,13 @@
     "jp_latin_title": "Harujion wa Ame to Saku -- Reminiscence in the Rain --",
     "en_latin_title": null,
     "shortcuts": [
-      "jio"
+      "isce",
+      "ncei",
+      "nisc",
+      "nwaa",
+      "waam"
     ],
-    "shortcuts_words": [
-      "harujion"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 7396,
@@ -85160,5 +85082,167 @@
     "shortcuts_words": [
       "yubiwa"
     ]
+  },
+  {
+    "vn_id": 7461,
+    "jp_latin_title": "Idol to 〇〇 Shicha Dame Desu ka?",
+    "en_latin_title": "Can I Not Fall for Idols?",
+    "shortcuts": [
+      "〇"
+    ],
+    "shortcuts_words": [
+      "〇〇"
+    ]
+  },
+  {
+    "vn_id": 7462,
+    "jp_latin_title": "Kugayama Shiori no Shinizama Techou",
+    "en_latin_title": "Kugayama Shiori's Death Diary",
+    "shortcuts": [
+      "hdi",
+      "kug"
+    ],
+    "shortcuts_words": [
+      "kugayama",
+      "shinizama"
+    ]
+  },
+  {
+    "vn_id": 7463,
+    "jp_latin_title": "Smile Remaster",
+    "en_latin_title": null,
+    "shortcuts": [
+      "iler"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7464,
+    "jp_latin_title": "Kagehinata no Uta",
+    "en_latin_title": null,
+    "shortcuts": [
+      "gehin",
+      "kageh"
+    ],
+    "shortcuts_words": [
+      "kagehinata"
+    ]
+  },
+  {
+    "vn_id": 7465,
+    "jp_latin_title": "Handsome Laundering -the mystic lover-",
+    "en_latin_title": null,
+    "shortcuts": [
+      "elau",
+      "gthe",
+      "hemy",
+      "iclo",
+      "laun"
+    ],
+    "shortcuts_words": [
+      "handsome",
+      "laundering"
+    ]
+  },
+  {
+    "vn_id": 7466,
+    "jp_latin_title": "Houkai Sekai no Navigatore",
+    "en_latin_title": "Navigatore of the Ruined World",
+    "shortcuts": [
+      "heru",
+      "navi",
+      "nedw",
+      "onav"
+    ],
+    "shortcuts_words": [
+      "houkai",
+      "navigatore"
+    ]
+  },
+  {
+    "vn_id": 7467,
+    "jp_latin_title": "Harujion no Sakasekata",
+    "en_latin_title": null,
+    "shortcuts": [
+      "jio"
+    ],
+    "shortcuts_words": [
+      "harujion",
+      "sakasekata"
+    ]
+  },
+  {
+    "vn_id": 7468,
+    "jp_latin_title": "Seifuku Kanojo 3",
+    "en_latin_title": null,
+    "shortcuts": [
+      "jo3"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7469,
+    "jp_latin_title": "as:9-nine- ARTEISIA",
+    "en_latin_title": null,
+    "shortcuts": [
+      "s9"
+    ],
+    "shortcuts_words": [
+      "arteisia",
+      "as9"
+    ]
+  },
+  {
+    "vn_id": 7470,
+    "jp_latin_title": "Tobenai Chou no Valentine",
+    "en_latin_title": null,
+    "shortcuts": [
+      "tob"
+    ],
+    "shortcuts_words": [
+      "tobenai"
+    ]
+  },
+  {
+    "vn_id": 7471,
+    "jp_latin_title": "Magical Princess",
+    "en_latin_title": null,
+    "shortcuts": [
+      "magicalp"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7472,
+    "jp_latin_title": "Yume Oukoku to Nemureru 100-nin no Ouji-sama",
+    "en_latin_title": null,
+    "shortcuts": [
+      "0nin",
+      "eouk",
+      "eru1",
+      "u100"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7473,
+    "jp_latin_title": "Ichigo Crisis!",
+    "en_latin_title": null,
+    "shortcuts": [
+      "gocr",
+      "igoc"
+    ],
+    "shortcuts_words": [
+      "ichigo"
+    ]
+  },
+  {
+    "vn_id": 7474,
+    "jp_latin_title": "Higashikyouto Chris no Jikenbo ~File 03: Satori no Sumu Mura~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "03"
+    ],
+    "shortcuts_words": null
   }
 ]

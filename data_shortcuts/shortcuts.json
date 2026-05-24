@@ -1203,7 +1203,7 @@
       "xn"
     ],
     "shortcuts_words": [
-      "gouda",
+      "akane",
       "nagareboshi"
     ]
   },
@@ -1212,11 +1212,10 @@
     "jp_latin_title": "ANGEL TYPE",
     "en_latin_title": null,
     "shortcuts": [
-      "yp"
+      "elt",
+      "lty"
     ],
-    "shortcuts_words": [
-      "type"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 112,
@@ -4350,8 +4349,7 @@
     "jp_latin_title": "Shamana Shamana ~Tsuki to Kokoro to Taiyou no Mahou~",
     "en_latin_title": null,
     "shortcuts": [
-      "manas",
-      "rotot"
+      "manas"
     ],
     "shortcuts_words": [
       "shamana"
@@ -4437,13 +4435,13 @@
   },
   {
     "vn_id": 398,
-    "jp_latin_title": "Akane Iro ni Somaru Saka",
+    "jp_latin_title": "Akaneiro ni Somaru Saka",
     "en_latin_title": null,
     "shortcuts": [
       "nei"
     ],
     "shortcuts_words": [
-      "akane",
+      "akaneiro",
       "somaru"
     ]
   },
@@ -5702,7 +5700,11 @@
     "jp_latin_title": "Akatsuki no Amaneka to Aoi Kyojin ~Pashiate Bunmei Kenkyuukai Koubouki~",
     "en_latin_title": null,
     "shortcuts": [
-      "np"
+      "ebu",
+      "hia",
+      "nky",
+      "nme",
+      "npa"
     ],
     "shortcuts_words": [
       "akatsuki",
@@ -5937,11 +5939,10 @@
     "jp_latin_title": "Natsuzora Kanata",
     "en_latin_title": null,
     "shortcuts": [
-      "uzor"
+      "oraka",
+      "zorak"
     ],
-    "shortcuts_words": [
-      "natsuzora"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 530,
@@ -6058,11 +6059,11 @@
     "jp_latin_title": "11eyes -Tsumi to Batsu to Aganai no Shoujo-",
     "en_latin_title": null,
     "shortcuts": [
-      "aga",
       "bat",
       "est",
       "oag",
-      "sts"
+      "sts",
+      "ujo"
     ],
     "shortcuts_words": [
       "aganai",
@@ -9557,7 +9558,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "aidme",
-      "asema",
       "easem",
       "semai"
     ],
@@ -15156,7 +15156,7 @@
     "jp_latin_title": "Daughter Maker 2",
     "en_latin_title": null,
     "shortcuts": [
-      "r2"
+      "er2"
     ],
     "shortcuts_words": null
   },
@@ -15327,7 +15327,6 @@
     "jp_latin_title": "Ether no Sunadokei ~Angel Time~",
     "en_latin_title": null,
     "shortcuts": [
-      "eia",
       "eth",
       "lti"
     ],
@@ -21484,9 +21483,7 @@
     "shortcuts": [
       "smm"
     ],
-    "shortcuts_words": [
-      "generations"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 1917,
@@ -23425,7 +23422,10 @@
     "jp_latin_title": "Haruharo!",
     "en_latin_title": null,
     "shortcuts": [
-      "haro"
+      "aruha",
+      "haruh",
+      "ruhar",
+      "uharo"
     ],
     "shortcuts_words": null
   },
@@ -24740,7 +24740,8 @@
     "jp_latin_title": "My☆Sister ~Sweet Gemini~",
     "en_latin_title": null,
     "shortcuts": [
-      "tge"
+      "etge",
+      "tgem"
     ],
     "shortcuts_words": null
   },
@@ -24837,7 +24838,9 @@
     "jp_latin_title": "Crayon Tulip ~Chidori to Koruri no Yuuwaku Jugyou~",
     "en_latin_title": null,
     "shortcuts": [
-      "pc"
+      "ipc",
+      "pch",
+      "tul"
     ],
     "shortcuts_words": [
       "crayon",
@@ -25823,8 +25826,8 @@
       "eijoo",
       "enous",
       "ijooj",
-      "nouse",
-      "oojok"
+      "oojok",
+      "senou"
     ],
     "shortcuts_words": null
   },
@@ -31698,7 +31701,6 @@
     "jp_latin_title": "Gokuin no Sentou",
     "en_latin_title": null,
     "shortcuts": [
-      "ntou",
       "uinn"
     ],
     "shortcuts_words": [
@@ -36462,7 +36464,7 @@
     ],
     "shortcuts_words": [
       "elementals",
-      "ranch"
+      "horny"
     ]
   },
   {
@@ -36982,8 +36984,7 @@
     "jp_latin_title": "Hoshi no Furu Toki",
     "en_latin_title": null,
     "shortcuts": [
-      "furut",
-      "uruto"
+      "furut"
     ],
     "shortcuts_words": null
   },
@@ -39185,7 +39186,8 @@
     "jp_latin_title": "Triagain",
     "en_latin_title": null,
     "shortcuts": [
-      "tria"
+      "riaga",
+      "triag"
     ],
     "shortcuts_words": null
   },
@@ -40716,7 +40718,6 @@
     "shortcuts": [
       "debu",
       "ebut",
-      "tsen",
       "utse"
     ],
     "shortcuts_words": [
@@ -48388,11 +48389,11 @@
     "jp_latin_title": "D.C. II ~Da Capo II~ Dearest Marriage",
     "en_latin_title": null,
     "shortcuts": [
-      "arest",
       "eares",
       "iidea",
       "poiid",
-      "restm"
+      "restm",
+      "stmar"
     ],
     "shortcuts_words": null
   },
@@ -49027,8 +49028,7 @@
     "en_latin_title": "The Human Reignition Project",
     "shortcuts": [
       "ionp",
-      "manr",
-      "npro"
+      "manr"
     ],
     "shortcuts_words": [
       "reignition"
@@ -49097,8 +49097,7 @@
     "jp_latin_title": "MiST -second edition-",
     "en_latin_title": null,
     "shortcuts": [
-      "mist",
-      "stse"
+      "mist"
     ],
     "shortcuts_words": null
   },
@@ -52376,7 +52375,9 @@
     "jp_latin_title": "Chuusotsu! 1st Graduation ~Chuusotsu no Time After Time~",
     "en_latin_title": "Chuusotsu! 1st Graduation: Time After Time",
     "shortcuts": [
-      "tg"
+      "dua",
+      "su1",
+      "tgr"
     ],
     "shortcuts_words": [
       "chuusotsu",
@@ -53976,7 +53977,9 @@
     "jp_latin_title": "Amenity's Life",
     "en_latin_title": null,
     "shortcuts": [
-      "ty"
+      "ity",
+      "tys",
+      "ysl"
     ],
     "shortcuts_words": [
       "amenitys"
@@ -57009,7 +57012,7 @@
     "jp_latin_title": null,
     "en_latin_title": "Seiyuu Danshi!",
     "shortcuts": [
-      "seiy"
+      "seiyu"
     ],
     "shortcuts_words": [
       "seiyuu"
@@ -58842,9 +58845,7 @@
     "shortcuts": [
       "smy"
     ],
-    "shortcuts_words": [
-      "carol"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 5187,
@@ -59806,8 +59807,7 @@
       "npe"
     ],
     "shortcuts_words": [
-      "birushana",
-      "senki"
+      "birushana"
     ]
   },
   {
@@ -61322,7 +61322,7 @@
     "jp_latin_title": "Aikagi 2",
     "en_latin_title": null,
     "shortcuts": [
-      "i2"
+      "gi2"
     ],
     "shortcuts_words": null
   },
@@ -67786,7 +67786,7 @@
       "iokas"
     ],
     "shortcuts_words": [
-      "kaijo",
+      "okasareru",
       "seijun"
     ]
   },
@@ -69365,7 +69365,7 @@
     "jp_latin_title": null,
     "en_latin_title": "Where Winter Crows Go",
     "shortcuts": [
-      "wh"
+      "wsg"
     ],
     "shortcuts_words": [
       "crows",
@@ -70116,10 +70116,10 @@
     "en_latin_title": "My Yandere-loving Self Was Reincarnated as the Villainess My Bias is Obsessed With, But I Can't Beat the Programming!",
     "shortcuts": [
       "asr",
-      "fwa",
       "hbu",
       "lfw",
-      "myy"
+      "myy",
+      "thb"
     ],
     "shortcuts_words": [
       "programming",
@@ -78712,7 +78712,7 @@
       "njo"
     ],
     "shortcuts_words": [
-      "choukyou",
+      "meijirareta",
       "settai"
     ]
   },
@@ -78770,7 +78770,11 @@
     "jp_latin_title": "Gekidan Prince",
     "en_latin_title": null,
     "shortcuts": [
-      "npr"
+      "anpr",
+      "danp",
+      "ekid",
+      "idan",
+      "npri"
     ],
     "shortcuts_words": [
       "gekidan"
@@ -81064,7 +81068,11 @@
     "jp_latin_title": "Christmas Tina -Utakata Toukei-",
     "en_latin_title": "Christmas Tina: Ephemeral Views of Winter",
     "shortcuts": [
-      "fw"
+      "aep",
+      "alv",
+      "chr",
+      "ews",
+      "fwi"
     ],
     "shortcuts_words": [
       "christmas",
@@ -81100,8 +81108,7 @@
       "jinr"
     ],
     "shortcuts_words": [
-      "jinrui",
-      "seiyoku"
+      "jinrui"
     ]
   },
   {
@@ -82435,8 +82442,7 @@
     "shortcuts": [
       "aoku",
       "eruf",
-      "ufuy",
-      "uyug"
+      "ufuy"
     ],
     "shortcuts_words": [
       "kanaete"
@@ -82509,7 +82515,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "orsf",
-      "rest",
       "rsfo"
     ],
     "shortcuts_words": null
@@ -85244,5 +85249,298 @@
       "03"
     ],
     "shortcuts_words": null
+  },
+  {
+    "vn_id": 7475,
+    "jp_latin_title": "CAROL",
+    "en_latin_title": null,
+    "shortcuts": [
+      "arol",
+      "caro"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7476,
+    "jp_latin_title": "Futatabi Fuyu ga Kuru Toki",
+    "en_latin_title": "When Winter Comes Again",
+    "shortcuts": [
+      "wh"
+    ],
+    "shortcuts_words": [
+      "futatabi",
+      "when"
+    ]
+  },
+  {
+    "vn_id": 7477,
+    "jp_latin_title": "Memory Girl",
+    "en_latin_title": null,
+    "shortcuts": [
+      "ryg"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7478,
+    "jp_latin_title": "ai sp@ce",
+    "en_latin_title": null,
+    "shortcuts": [
+      "pc"
+    ],
+    "shortcuts_words": [
+      "spce"
+    ]
+  },
+  {
+    "vn_id": 7479,
+    "jp_latin_title": "Agarest Senki 2",
+    "en_latin_title": "Agarest: Generations of War 2",
+    "shortcuts": [
+      "fw",
+      "i2",
+      "r2",
+      "tg"
+    ],
+    "shortcuts_words": [
+      "agarest",
+      "senki"
+    ]
+  },
+  {
+    "vn_id": 7480,
+    "jp_latin_title": "Tantoushite Kureta Kangoshi wa Boku no Koto o Kiratteita Doukyuusei Deshita ~Tsundere Nurse no Ecchi na Kango~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "akang",
+      "antou",
+      "enurs",
+      "erenu",
+      "hiwab"
+    ],
+    "shortcuts_words": [
+      "kiratteita",
+      "tantoushite"
+    ]
+  },
+  {
+    "vn_id": 7481,
+    "jp_latin_title": "Normalize Human Communication",
+    "en_latin_title": null,
+    "shortcuts": [
+      "zeh"
+    ],
+    "shortcuts_words": [
+      "normalize"
+    ]
+  },
+  {
+    "vn_id": 7482,
+    "jp_latin_title": "Natsuzora Asterism",
+    "en_latin_title": null,
+    "shortcuts": [
+      "aast",
+      "oraa",
+      "raas",
+      "uzor"
+    ],
+    "shortcuts_words": [
+      "asterism",
+      "natsuzora"
+    ]
+  },
+  {
+    "vn_id": 7483,
+    "jp_latin_title": "Sugar*Style Koibito Ijou Fuufu Miman After Story!!",
+    "en_latin_title": null,
+    "shortcuts": [
+      "leko",
+      "oijo",
+      "ylek"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7484,
+    "jp_latin_title": "Senpai Oshiete Kudasai! ~Eroge o Kashita no wa Koukishin Ousei na You-kya Kouhai Deshita~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "geok",
+      "haid",
+      "ogeo",
+      "saie"
+    ],
+    "shortcuts_words": [
+      "kashita",
+      "koukishin"
+    ]
+  },
+  {
+    "vn_id": 7485,
+    "jp_latin_title": "Akahon! Prototype IA",
+    "en_latin_title": null,
+    "shortcuts": [
+      "np",
+      "ty",
+      "yp"
+    ],
+    "shortcuts_words": [
+      "akahon",
+      "prototype"
+    ]
+  },
+  {
+    "vn_id": 7486,
+    "jp_latin_title": "Seiyoku Shori mo Nurse ni Makasete",
+    "en_latin_title": null,
+    "shortcuts": [
+      "seiy"
+    ],
+    "shortcuts_words": [
+      "seiyoku"
+    ]
+  },
+  {
+    "vn_id": 7487,
+    "jp_latin_title": "Sake Acanthus",
+    "en_latin_title": null,
+    "shortcuts": [
+      "eaca",
+      "keac",
+      "nthu",
+      "sake"
+    ],
+    "shortcuts_words": [
+      "acanthus"
+    ]
+  },
+  {
+    "vn_id": 7488,
+    "jp_latin_title": "Charon",
+    "en_latin_title": null,
+    "shortcuts": [
+      "haro"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7489,
+    "jp_latin_title": "Tasogare Jyväskylä​",
+    "en_latin_title": null,
+    "shortcuts": [
+      "jy"
+    ],
+    "shortcuts_words": [
+      "jyvaskyla"
+    ]
+  },
+  {
+    "vn_id": 7490,
+    "jp_latin_title": "Ore no Kanojo wa Taninbou ga Ki ni Naru You Desu. ~Karakai Jouzu na Hentai Kanojo to no Seishun Swapping wa, Ore no Kakure Seiheki o Kaikashi Hidaika Sasemashita~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "gwao",
+      "nswa",
+      "unah",
+      "unsw"
+    ],
+    "shortcuts_words": [
+      "kaikashi",
+      "karakai"
+    ]
+  },
+  {
+    "vn_id": 7491,
+    "jp_latin_title": "Tomodachinbou de Midara na Shiru o Afuresaseru Haha no Ureta Mitsuana ~Kyonyuu o Yurashi Mimodaeru Kaa-san no Aegigoe wa, Tonari no Boku no Heya made Hibikiwataru~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "daer",
+      "egig",
+      "noae",
+      "oafu",
+      "ruoa"
+    ],
+    "shortcuts_words": [
+      "afuresaseru",
+      "tomodachinbou"
+    ]
+  },
+  {
+    "vn_id": 7492,
+    "jp_latin_title": "Utawarerumono: Shiro e no Michishirube",
+    "en_latin_title": "Utawarerumono: Past and Present Rediscovered",
+    "shortcuts": [
+      "dpre",
+      "iroe",
+      "roen",
+      "scov"
+    ],
+    "shortcuts_words": [
+      "rediscovered"
+    ]
+  },
+  {
+    "vn_id": 7493,
+    "jp_latin_title": "Imouto Bloomers 2",
+    "en_latin_title": null,
+    "shortcuts": [
+      "obloomers2"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7494,
+    "jp_latin_title": "Choukyou Shidou Nisshi ~Gakuen Touseiroku~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "doun",
+      "ntou",
+      "seir"
+    ],
+    "shortcuts_words": [
+      "choukyou",
+      "touseiroku"
+    ]
+  },
+  {
+    "vn_id": 7495,
+    "jp_latin_title": "Triad Lilytear",
+    "en_latin_title": null,
+    "shortcuts": [
+      "dlil",
+      "iadl",
+      "ilyt",
+      "tria"
+    ],
+    "shortcuts_words": [
+      "lilytear",
+      "triad"
+    ]
+  },
+  {
+    "vn_id": 7496,
+    "jp_latin_title": "Yukiakari no Melody",
+    "en_latin_title": null,
+    "shortcuts": [
+      "yukia"
+    ],
+    "shortcuts_words": [
+      "yukiakari"
+    ]
+  },
+  {
+    "vn_id": 7497,
+    "jp_latin_title": "Slow Damage: Clean Dishes",
+    "en_latin_title": null,
+    "shortcuts": [
+      "dishe",
+      "eandi",
+      "gecle",
+      "leand",
+      "magec"
+    ],
+    "shortcuts_words": [
+      "dishes"
+    ]
   }
 ]

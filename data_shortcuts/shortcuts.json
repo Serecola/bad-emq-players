@@ -13329,7 +13329,11 @@
     "jp_latin_title": "One Tama ~Boku to Onee-chan to Kitsune no Yu~",
     "en_latin_title": null,
     "shortcuts": [
-      "onet"
+      "mabok",
+      "nenoy",
+      "netam",
+      "oneta",
+      "sunen"
     ],
     "shortcuts_words": null
   },
@@ -14200,10 +14204,10 @@
     "en_latin_title": null,
     "shortcuts": [
       "fara",
-      "oneb",
       "oseo",
       "socl",
-      "ufar"
+      "ufar",
+      "ysoc"
     ],
     "shortcuts_words": [
       "faraway"
@@ -16334,12 +16338,9 @@
     "jp_latin_title": "Yuki no Tokeru koro ni...",
     "en_latin_title": null,
     "shortcuts": [
-      "rukor",
-      "toker"
+      "rukor"
     ],
-    "shortcuts_words": [
-      "tokeru"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 1461,
@@ -25532,8 +25533,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "hatoki",
-      "iminih",
-      "miniha",
       "shatok"
     ],
     "shortcuts_words": null
@@ -28348,7 +28347,7 @@
     "jp_latin_title": "Sweet Season",
     "en_latin_title": null,
     "shortcuts": [
-      "tsea"
+      "etsea"
     ],
     "shortcuts_words": null
   },
@@ -29991,7 +29990,7 @@
     "jp_latin_title": "Onegai",
     "en_latin_title": null,
     "shortcuts": [
-      "oneg"
+      "onega"
     ],
     "shortcuts_words": null
   },
@@ -33924,7 +33923,11 @@
     "jp_latin_title": "Sora to Kumo to Kimi no Koi",
     "en_latin_title": null,
     "shortcuts": [
-      "sorat"
+      "atokum",
+      "motoki",
+      "okumot",
+      "otokim",
+      "ratoku"
     ],
     "shortcuts_words": null
   },
@@ -40248,9 +40251,7 @@
       "14k",
       "cdo"
     ],
-    "shortcuts_words": [
-      "triple"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 3573,
@@ -44806,7 +44807,6 @@
     "jp_latin_title": "Tenbin no La DEA. ~Ikusa Megami Memoria~",
     "en_latin_title": null,
     "shortcuts": [
-      "binn",
       "eaik",
       "tenb"
     ],
@@ -49015,8 +49015,7 @@
     "en_latin_title": null,
     "shortcuts": [
       "mabo",
-      "nody",
-      "odys"
+      "nody"
     ],
     "shortcuts_words": [
       "maboroshi"
@@ -59605,8 +59604,7 @@
       "ogs"
     ],
     "shortcuts_words": [
-      "wanko",
-      "yomeiri"
+      "dogs"
     ]
   },
   {
@@ -60911,8 +60909,7 @@
     "en_latin_title": null,
     "shortcuts": [
       "amut",
-      "doim",
-      "homi"
+      "doim"
     ],
     "shortcuts_words": [
       "shimojimo",
@@ -67400,13 +67397,11 @@
     "shortcuts": [
       "idenh",
       "kuget",
-      "omosh",
       "tanga",
-      "tomos"
+      "utang"
     ],
     "shortcuts_words": [
-      "hakugetsu",
-      "tomoshibi"
+      "hakugetsu"
     ]
   },
   {
@@ -70777,7 +70772,10 @@
     "jp_latin_title": "Yami to Boushi to Hon no Tabibito",
     "en_latin_title": null,
     "shortcuts": [
-      "honn"
+      "itoho",
+      "obous",
+      "ohonn",
+      "yamit"
     ],
     "shortcuts_words": null
   },
@@ -75550,7 +75548,7 @@
   {
     "vn_id": 6624,
     "jp_latin_title": "Mojibake",
-    "en_latin_title": null,
+    "en_latin_title": "Homicipher",
     "shortcuts": [
       "moj"
     ],
@@ -77165,7 +77163,7 @@
   {
     "vn_id": 6760,
     "jp_latin_title": "ONE ~Kagayaku Kisetsu e~",
-    "en_latin_title": null,
+    "en_latin_title": "ONE ~To the Radiant Season~",
     "shortcuts": [
       "one"
     ],
@@ -85541,6 +85539,141 @@
     ],
     "shortcuts_words": [
       "dishes"
+    ]
+  },
+  {
+    "vn_id": 7498,
+    "jp_latin_title": "Yoru no Kakera",
+    "en_latin_title": null,
+    "shortcuts": [
+      "yorun"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7499,
+    "jp_latin_title": "Natsu no Tomoshibi",
+    "en_latin_title": null,
+    "shortcuts": [
+      "omosh",
+      "oshib",
+      "tomos"
+    ],
+    "shortcuts_words": [
+      "tomoshibi"
+    ]
+  },
+  {
+    "vn_id": 7500,
+    "jp_latin_title": "Sora to Kioku no Kanata",
+    "en_latin_title": null,
+    "shortcuts": [
+      "sorat"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7501,
+    "jp_latin_title": "Omoide Archive",
+    "en_latin_title": null,
+    "shortcuts": [
+      "dearch",
+      "idearc",
+      "oidear"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7502,
+    "jp_latin_title": "Yamiyuku Kimi ni Hanataba o ～Bouquet for you in the dark～",
+    "en_latin_title": null,
+    "shortcuts": [
+      "uetf"
+    ],
+    "shortcuts_words": [
+      "yamiyuku"
+    ]
+  },
+  {
+    "vn_id": 7503,
+    "jp_latin_title": "Futago no Toriko ~Koisuru Idol~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "ruid"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7504,
+    "jp_latin_title": "Triple Pairing",
+    "en_latin_title": "Triple Pairing",
+    "shortcuts": [
+      "iple",
+      "ripl",
+      "trip"
+    ],
+    "shortcuts_words": [
+      "pairing",
+      "triple"
+    ]
+  },
+  {
+    "vn_id": 7505,
+    "jp_latin_title": "Soushitsu no Shounenshoujo Dainibu : Shi",
+    "en_latin_title": null,
+    "shortcuts": [
+      "ainib",
+      "ibush",
+      "jodai",
+      "nibus",
+      "odain"
+    ],
+    "shortcuts_words": [
+      "dainibu",
+      "soushitsu"
+    ]
+  },
+  {
+    "vn_id": 7506,
+    "jp_latin_title": "Tokeru Fuuka to Shirousagi",
+    "en_latin_title": null,
+    "shortcuts": [
+      "irous",
+      "keruf",
+      "ousag",
+      "rufuu",
+      "toker"
+    ],
+    "shortcuts_words": [
+      "shirousagi",
+      "tokeru"
+    ]
+  },
+  {
+    "vn_id": 7507,
+    "jp_latin_title": "Wanko no Yomeiri ~Arata na Nihon no Shippo~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "honn",
+      "wank"
+    ],
+    "shortcuts_words": [
+      "wanko",
+      "yomeiri"
+    ]
+  },
+  {
+    "vn_id": 7508,
+    "jp_latin_title": "Iris Odyssey",
+    "en_latin_title": "Iris Odyssey",
+    "shortcuts": [
+      "dyss",
+      "odys",
+      "ssey",
+      "ysse"
+    ],
+    "shortcuts_words": [
+      "odyssey"
     ]
   }
 ]

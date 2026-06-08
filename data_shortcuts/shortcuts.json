@@ -1224,8 +1224,7 @@
     "shortcuts": [
       "etf",
       "foo",
-      "ool",
-      "tfo"
+      "ool"
     ],
     "shortcuts_words": [
       "bittersweet",
@@ -3715,7 +3714,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "nqui",
-      "quis",
       "uist"
     ],
     "shortcuts_words": null
@@ -26324,8 +26322,7 @@
       "hioa",
       "ioag",
       "ntfo",
-      "oage",
-      "tfor"
+      "oage"
     ],
     "shortcuts_words": [
       "present"
@@ -31261,7 +31258,9 @@
     "jp_latin_title": "Tsukushite Agechau 2 Nandemo Shichau no",
     "en_latin_title": null,
     "shortcuts": [
-      "u2n"
+      "2nan",
+      "au2n",
+      "u2na"
     ],
     "shortcuts_words": null
   },
@@ -35753,12 +35752,9 @@
     "jp_latin_title": "Himitsu Chouhou Buin - 00Nanako-chan 3",
     "en_latin_title": null,
     "shortcuts": [
-      "n0"
+      "han3"
     ],
-    "shortcuts_words": [
-      "chouhou",
-      "himitsu"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 3185,
@@ -52587,7 +52583,11 @@
     "jp_latin_title": "Tenioha! 2 ~Nee, Motto Ecchi na Koto Ippai Shiyo?~",
     "en_latin_title": null,
     "shortcuts": [
-      "a2n"
+      "a2ne",
+      "ha2n",
+      "neem",
+      "nioh",
+      "oha2"
     ],
     "shortcuts_words": [
       "tenioha"
@@ -57837,7 +57837,6 @@
     "jp_latin_title": "Nemurenu Hitsuji to Kodoku na Ookami -A Tale of Love, and Cutthroat-",
     "en_latin_title": null,
     "shortcuts": [
-      "dcu",
       "nem",
       "nuh"
     ],
@@ -63638,7 +63637,6 @@
       "2nda",
       "dalb",
       "ku2n",
-      "u2nd",
       "uku2"
     ],
     "shortcuts_words": [
@@ -64315,8 +64313,7 @@
     "en_latin_title": "Real Hentai Situation! 2",
     "shortcuts": [
       "aisi",
-      "ealh",
-      "isit"
+      "ealh"
     ],
     "shortcuts_words": null
   },
@@ -74662,7 +74659,10 @@
     "jp_latin_title": "Mugen no Tír na nÓg",
     "en_latin_title": null,
     "shortcuts": [
-      "tir"
+      "irna",
+      "otir",
+      "rnan",
+      "tirn"
     ],
     "shortcuts_words": null
   },
@@ -85674,6 +85674,30 @@
     ],
     "shortcuts_words": [
       "odyssey"
+    ]
+  },
+  {
+    "vn_id": 7509,
+    "jp_latin_title": "Himitsu Chouhou Buin - 00Nanako-chan 2",
+    "en_latin_title": null,
+    "shortcuts": [
+      "n0"
+    ],
+    "shortcuts_words": [
+      "chouhou",
+      "himitsu"
+    ]
+  },
+  {
+    "vn_id": 7510,
+    "jp_latin_title": "Putrika 2nd.cut:For the Exquisite Attire",
+    "en_latin_title": null,
+    "shortcuts": [
+      "xq"
+    ],
+    "shortcuts_words": [
+      "2ndcutfor",
+      "exquisite"
     ]
   }
 ]

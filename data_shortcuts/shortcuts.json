@@ -1223,8 +1223,7 @@
     "en_latin_title": null,
     "shortcuts": [
       "etf",
-      "foo",
-      "ool"
+      "foo"
     ],
     "shortcuts_words": [
       "bittersweet",
@@ -9747,7 +9746,6 @@
     "jp_latin_title": "Under the Moon",
     "en_latin_title": null,
     "shortcuts": [
-      "rthemo",
       "undert"
     ],
     "shortcuts_words": null
@@ -16643,15 +16641,6 @@
     ]
   },
   {
-    "vn_id": 1485,
-    "jp_latin_title": "After...",
-    "en_latin_title": null,
-    "shortcuts": [
-      "af"
-    ],
-    "shortcuts_words": null
-  },
-  {
     "vn_id": 1486,
     "jp_latin_title": "Shinshou Genmukan",
     "en_latin_title": null,
@@ -16991,9 +16980,7 @@
     "jp_latin_title": "Kachou Fuugetsu ~Koi ni Ochitaru Hanazono no Hime~",
     "en_latin_title": null,
     "shortcuts": [
-      "azon",
       "fuug",
-      "nazo",
       "ufuu",
       "uuge"
     ],
@@ -23197,7 +23184,6 @@
     "jp_latin_title": "Ricotte ~Alpenbul no Utahime~",
     "en_latin_title": null,
     "shortcuts": [
-      "ric",
       "uln"
     ],
     "shortcuts_words": [
@@ -24232,7 +24218,7 @@
     "jp_latin_title": "Aishite Nightingale",
     "en_latin_title": null,
     "shortcuts": [
-      "ht"
+      "hti"
     ],
     "shortcuts_words": [
       "aishite",
@@ -25507,7 +25493,6 @@
     "jp_latin_title": "Uchuu Tenshi Boin Boin!",
     "en_latin_title": null,
     "shortcuts": [
-      "iboi",
       "nboi",
       "uchu"
     ],
@@ -27511,7 +27496,7 @@
     "jp_latin_title": "Shikigami",
     "en_latin_title": null,
     "shortcuts": [
-      "shik"
+      "shikig"
     ],
     "shortcuts_words": null
   },
@@ -30999,7 +30984,6 @@
     "shortcuts": [
       "eetb",
       "etbi",
-      "oswe",
       "tbit"
     ],
     "shortcuts_words": null
@@ -32947,7 +32931,11 @@
     "jp_latin_title": "Brothers Conflict",
     "en_latin_title": null,
     "shortcuts": [
-      "rsc"
+      "flic",
+      "lict",
+      "nfli",
+      "onfl",
+      "rsco"
     ],
     "shortcuts_words": null
   },
@@ -34628,7 +34616,6 @@
     "jp_latin_title": "Kono Hareta Sora no Shita de",
     "en_latin_title": null,
     "shortcuts": [
-      "etaso",
       "konoh"
     ],
     "shortcuts_words": null
@@ -34879,11 +34866,15 @@
     "jp_latin_title": "Houkago ☆ Eroge Bu! ~Eroge Seisaku no Tame Onna no Ko to Ecchi Shimakuri na Mainichi~",
     "en_latin_title": null,
     "shortcuts": [
-      "hou"
+      "buer",
+      "ebue",
+      "goer",
+      "meon",
+      "ogeb"
     ],
     "shortcuts_words": [
-      "houkago",
-      "seisaku"
+      "seisaku",
+      "shimakuri"
     ]
   },
   {
@@ -41092,11 +41083,11 @@
     "jp_latin_title": "Akabanzu ~Real na Sekai de Boku ga Kimi ni Dekiru Koto~",
     "en_latin_title": null,
     "shortcuts": [
-      "eal",
       "lna",
       "nas",
       "nzu",
-      "uga"
+      "uga",
+      "zur"
     ],
     "shortcuts_words": [
       "akabanzu",
@@ -44414,9 +44405,7 @@
     "shortcuts": [
       "ubuh"
     ],
-    "shortcuts_words": [
-      "otoshimono"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 3937,
@@ -46798,7 +46787,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "eett",
-      "nosw",
       "twai"
     ],
     "shortcuts_words": null
@@ -47664,7 +47652,6 @@
     "jp_latin_title": "Kimi no Tonari de Koishiteru! ~The Respective Happiness~",
     "en_latin_title": null,
     "shortcuts": [
-      "iveh",
       "resp",
       "veha"
     ],
@@ -50592,7 +50579,6 @@
     "shortcuts": [
       "bil",
       "erp",
-      "ili",
       "rpo"
     ],
     "shortcuts_words": [
@@ -52275,7 +52261,11 @@
     "jp_latin_title": "Grimo ☆ Love ~Houkago no Witch~",
     "en_latin_title": null,
     "shortcuts": [
-      "veh"
+      "imol",
+      "molo",
+      "nowi",
+      "oveh",
+      "veho"
     ],
     "shortcuts_words": [
       "grimo"
@@ -52841,7 +52831,9 @@
     "jp_latin_title": "Apoclitos -Geten-",
     "en_latin_title": null,
     "shortcuts": [
-      "sg"
+      "ocl",
+      "osg",
+      "sge"
     ],
     "shortcuts_words": [
       "apoclitos"
@@ -55652,8 +55644,7 @@
     "en_latin_title": null,
     "shortcuts": [
       "hsi",
-      "rsg",
-      "sga"
+      "rsg"
     ],
     "shortcuts_words": null
   },
@@ -57048,10 +57039,10 @@
     "en_latin_title": null,
     "shortcuts": [
       "ahad",
-      "gibo",
       "ibon",
       "kaor",
-      "maii"
+      "maii",
+      "mett"
     ],
     "shortcuts_words": [
       "kaori",
@@ -61273,7 +61264,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "osli",
-      "rsch",
       "slin"
     ],
     "shortcuts_words": [
@@ -62386,7 +62376,6 @@
     "shortcuts": [
       "izo",
       "noy",
-      "otr",
       "zor"
     ],
     "shortcuts_words": [
@@ -64450,7 +64439,7 @@
       "intc",
       "ntch",
       "onew",
-      "vemi"
+      "wayl"
     ],
     "shortcuts_words": null
   },
@@ -65423,7 +65412,7 @@
     ],
     "shortcuts_words": [
       "deport",
-      "this"
+      "dick"
     ]
   },
   {
@@ -66303,7 +66292,6 @@
     "jp_latin_title": "Sex Underworld e Youkoso!",
     "en_latin_title": null,
     "shortcuts": [
-      "exun",
       "sexu",
       "xund"
     ],
@@ -66614,8 +66602,7 @@
     "jp_latin_title": "HajiLove -Making * Lovers-",
     "en_latin_title": null,
     "shortcuts": [
-      "jil",
-      "vem"
+      "jil"
     ],
     "shortcuts_words": [
       "hajilove"
@@ -71313,7 +71300,11 @@
     "jp_latin_title": "Silver Jiken 25 Ku",
     "en_latin_title": "The 25th Ward: The Silver Case",
     "shortcuts": [
-      "th"
+      "25k",
+      "25t",
+      "5ku",
+      "5th",
+      "e25"
     ],
     "shortcuts_words": [
       "25th",
@@ -76106,7 +76097,8 @@
     "jp_latin_title": "T&Bx3",
     "en_latin_title": null,
     "shortcuts": [
-      "t"
+      "bx",
+      "tb"
     ],
     "shortcuts_words": null
   },
@@ -76271,7 +76263,9 @@
     "jp_latin_title": "Iris -Gousetsu no Ou-",
     "en_latin_title": null,
     "shortcuts": [
-      "isg"
+      "isgo",
+      "risg",
+      "sgou"
     ],
     "shortcuts_words": [
       "gousetsu"
@@ -80100,7 +80094,6 @@
     "jp_latin_title": "Yagate Chiriyuku Kagami no Hana e",
     "en_latin_title": "Dear Mirror Flower",
     "shortcuts": [
-      "irr",
       "yag"
     ],
     "shortcuts_words": [
@@ -81748,8 +81741,7 @@
     "jp_latin_title": "Usotsuki wa Tenshi no Hajimari",
     "en_latin_title": null,
     "shortcuts": [
-      "kiwate",
-      "ukiwat"
+      "kiwate"
     ],
     "shortcuts_words": null
   },
@@ -85040,8 +85032,7 @@
     "jp_latin_title": "Atelier Rorona: The Alchemist of Arland",
     "en_latin_title": null,
     "shortcuts": [
-      "ror",
-      "rro"
+      "ror"
     ],
     "shortcuts_words": [
       "rorona"
@@ -85699,5 +85690,108 @@
       "2ndcutfor",
       "exquisite"
     ]
+  },
+  {
+    "vn_id": 7511,
+    "jp_latin_title": "※This Game Is Not Real.",
+    "en_latin_title": "※This Game Is Not Real.",
+    "shortcuts": [
+      "t"
+    ],
+    "shortcuts_words": [
+      "this"
+    ]
+  },
+  {
+    "vn_id": 7512,
+    "jp_latin_title": "Tsui no Sora",
+    "en_latin_title": null,
+    "shortcuts": [
+      "tsuin"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7513,
+    "jp_latin_title": "Tsui no Sora Remake",
+    "en_latin_title": null,
+    "shortcuts": [
+      "remake"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7514,
+    "jp_latin_title": "Shiki to Hitsuji to Warau Tsuki ~Cry for the Moon~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "cryf",
+      "icry",
+      "kicr",
+      "ryfo",
+      "shik"
+    ],
+    "shortcuts_words": [
+      "shiki"
+    ]
+  },
+  {
+    "vn_id": 7515,
+    "jp_latin_title": "Rica Mode♡",
+    "en_latin_title": "Rica Mode♡",
+    "shortcuts": [
+      "ric"
+    ],
+    "shortcuts_words": [
+      "rica"
+    ]
+  },
+  {
+    "vn_id": 7516,
+    "jp_latin_title": "Gibo Inkan ~Genkou no ushiro no Real~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "gibo",
+      "iboi",
+      "orea"
+    ],
+    "shortcuts_words": [
+      "genkou"
+    ]
+  },
+  {
+    "vn_id": 7517,
+    "jp_latin_title": "Houkago .LIVE -Tasogare no Kagami-",
+    "en_latin_title": "After School .LIVE – Mirror of Twilight",
+    "shortcuts": [
+      "af",
+      "ht"
+    ],
+    "shortcuts_words": [
+      "after",
+      "live"
+    ]
+  },
+  {
+    "vn_id": 7518,
+    "jp_latin_title": "Hanazono Serena no Otoshimono ~sweet memory~",
+    "en_latin_title": "Serena Hanazono’s Lost Item ~Sweet Memory~",
+    "shortcuts": [
+      "ser"
+    ],
+    "shortcuts_words": [
+      "hanazono",
+      "serena"
+    ]
+  },
+  {
+    "vn_id": 7519,
+    "jp_latin_title": "Suki Suki! ~Watashi no Darling~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "kisuk",
+      "sukis"
+    ],
+    "shortcuts_words": null
   }
 ]

@@ -1007,7 +1007,10 @@
     "jp_latin_title": "Brave Soul",
     "en_latin_title": "Brave Soul",
     "shortcuts": [
-      "ave"
+      "aves",
+      "esou",
+      "rave",
+      "veso"
     ],
     "shortcuts_words": [
       "brave"
@@ -5501,12 +5504,13 @@
     "jp_latin_title": "Piano no Mori no Mankai no Shita",
     "en_latin_title": null,
     "shortcuts": [
-      "pian"
-    ],
-    "shortcuts_words": [
+      "ankain",
+      "ianono",
       "mankai",
-      "piano"
-    ]
+      "nomank",
+      "nonomo"
+    ],
+    "shortcuts_words": null
   },
   {
     "vn_id": 491,
@@ -11561,7 +11565,11 @@
     "jp_latin_title": "Guisard ~Bokura wa Omoi o Mi ni Matou~",
     "en_latin_title": null,
     "shortcuts": [
-      "dbo"
+      "ardb",
+      "guis",
+      "oiom",
+      "rdbo",
+      "sard"
     ],
     "shortcuts_words": [
       "guisard",
@@ -17121,7 +17129,6 @@
     "shortcuts": [
       "kisu",
       "meme",
-      "smem",
       "ssme"
     ],
     "shortcuts_words": [
@@ -17756,7 +17763,11 @@
     "jp_latin_title": "Pretty Devil Paradise ~Millium Makai Dakkan Shirei!~",
     "en_latin_title": null,
     "shortcuts": [
-      "tyd"
+      "ilpa",
+      "iumm",
+      "lliu",
+      "mmak",
+      "ttyd"
     ],
     "shortcuts_words": [
       "millium"
@@ -17979,8 +17990,7 @@
       "iger"
     ],
     "shortcuts_words": [
-      "aisaiger",
-      "sentai"
+      "aisaiger"
     ]
   },
   {
@@ -22205,9 +22215,7 @@
     "shortcuts": [
       "nkai"
     ],
-    "shortcuts_words": [
-      "kururi"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 1982,
@@ -23826,7 +23834,6 @@
       "uav"
     ],
     "shortcuts_words": [
-      "aventure",
       "nangoku"
     ]
   },
@@ -27020,8 +27027,7 @@
     "jp_latin_title": "Princess Memory",
     "en_latin_title": null,
     "shortcuts": [
-      "essme",
-      "smemo"
+      "essme"
     ],
     "shortcuts_words": null
   },
@@ -28714,7 +28720,10 @@
     "jp_latin_title": "Kimi ni Okuru Tsubasa",
     "en_latin_title": null,
     "shortcuts": [
-      "kimin"
+      "iokuru",
+      "kuruts",
+      "okurut",
+      "rutsub"
     ],
     "shortcuts_words": null
   },
@@ -30226,7 +30235,6 @@
     "jp_latin_title": "Soredemo Tsuma o Ai Shiteru",
     "en_latin_title": null,
     "shortcuts": [
-      "aoai",
       "maoa"
     ],
     "shortcuts_words": [
@@ -31396,7 +31404,11 @@
     "jp_latin_title": "Daisy Chain ~Terminator Girl~",
     "en_latin_title": null,
     "shortcuts": [
-      "ych"
+      "aisy",
+      "isyc",
+      "sych",
+      "term",
+      "torg"
     ],
     "shortcuts_words": [
       "daisy",
@@ -31916,12 +31928,10 @@
     "en_latin_title": null,
     "shortcuts": [
       "outr",
-      "rkou",
-      "utra"
+      "rkou"
     ],
     "shortcuts_words": [
-      "torihiki",
-      "trader"
+      "torihiki"
     ]
   },
   {
@@ -34045,7 +34055,7 @@
       "wai"
     ],
     "shortcuts_words": [
-      "kyoukan",
+      "nakadachi",
       "waimen"
     ]
   },
@@ -36999,8 +37009,7 @@
       "saic"
     ],
     "shortcuts_words": [
-      "kinema",
-      "mosaic"
+      "kinema"
     ]
   },
   {
@@ -38240,7 +38249,6 @@
     "jp_latin_title": "Twins 2 -Ren'ai Miman-",
     "en_latin_title": null,
     "shortcuts": [
-      "2ren",
       "ns2r"
     ],
     "shortcuts_words": [
@@ -38481,7 +38489,6 @@
     "shortcuts": [
       "haton",
       "nohai",
-      "nokaa",
       "ubout"
     ],
     "shortcuts_words": null
@@ -42715,7 +42722,7 @@
     "jp_latin_title": "Cocoro@Function!",
     "en_latin_title": null,
     "shortcuts": [
-      "co"
+      "nct"
     ],
     "shortcuts_words": null
   },
@@ -46024,8 +46031,11 @@
     "jp_latin_title": "Kagami no Kuni no Ohime-sama ga Gakuen Seikatsu to Koi o Hajimemashita",
     "en_latin_title": null,
     "shortcuts": [
-      "agag",
-      "gaga"
+      "gagak",
+      "iohaj",
+      "kagam",
+      "magag",
+      "ninoo"
     ],
     "shortcuts_words": [
       "kagami"
@@ -48003,7 +48013,6 @@
     "jp_latin_title": "Kujiragami no Tearstilla",
     "en_latin_title": null,
     "shortcuts": [
-      "kuj",
       "til"
     ],
     "shortcuts_words": [
@@ -49557,7 +49566,6 @@
     "shortcuts": [
       "has",
       "kto",
-      "ldb",
       "okt"
     ],
     "shortcuts_words": [
@@ -55446,7 +55454,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "emino",
-      "susem",
       "usemi",
       "utsus"
     ],
@@ -55653,7 +55660,8 @@
     "jp_latin_title": "Sakura no Toki -Sakura no Mori no Shita o Ayumu-",
     "en_latin_title": null,
     "shortcuts": [
-      "aoa"
+      "aoay",
+      "taoa"
     ],
     "shortcuts_words": null
   },
@@ -57937,7 +57945,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "3lo",
-      "cub",
       "e3l",
       "ve3"
     ],
@@ -59213,7 +59220,6 @@
     "jp_latin_title": "Ikenai Kozukuri 5 ~Tonari ni Koshitekita Hitozuma to Ikenai Sex~",
     "en_latin_title": null,
     "shortcuts": [
-      "5to",
       "i5t",
       "ri5"
     ],
@@ -59340,7 +59346,6 @@
     "jp_latin_title": "Mirai Radio to Jinkou-bato",
     "en_latin_title": "The Future Radio and the Artificial Pigeons",
     "shortcuts": [
-      "lpi",
       "pig"
     ],
     "shortcuts_words": [
@@ -59950,7 +59955,6 @@
     "jp_latin_title": "Tobira no Densetsu ~Kaze no Tsubasa~",
     "en_latin_title": null,
     "shortcuts": [
-      "irano",
       "tobir",
       "zenot"
     ],
@@ -61159,7 +61163,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "apad",
-      "deky",
       "oitt",
       "pada",
       "papa"
@@ -61403,7 +61406,6 @@
     "en_latin_title": "Master-Servant Sex with the Beauty from the Orient ~Contract with a Semen-Sucking Demon~",
     "shortcuts": [
       "ctw",
-      "exw",
       "ntc",
       "tyf",
       "xwi"
@@ -61772,11 +61774,11 @@
     "jp_latin_title": "Ore no Are ga Shinsei Sugite Chouhou Sarerun Daga!?",
     "en_latin_title": "Isekai Harem Saver",
     "shortcuts": [
-      "aver",
       "eisu",
       "emsa",
       "isek",
-      "msav"
+      "msav",
+      "save"
     ],
     "shortcuts_words": [
       "isekai",
@@ -62537,8 +62539,7 @@
     "jp_latin_title": "Jimime na Jijo-san no Oshigoto Sex ~Ojou-sama ni Kawatte Oaite Shimasu~",
     "en_latin_title": "The Modest Handmaid’s Sex Work ~I will be your partner in place of the young mistress~",
     "shortcuts": [
-      "xoj",
-      "xwo"
+      "xoj"
     ],
     "shortcuts_words": [
       "jimime",
@@ -65786,7 +65787,6 @@
       "unts"
     ],
     "shortcuts_words": [
-      "sewayaki",
       "tsuntsun"
     ]
   },
@@ -66304,7 +66304,6 @@
     "jp_latin_title": "Fuyukara, Kururu.",
     "en_latin_title": null,
     "shortcuts": [
-      "kurur",
       "rakur",
       "uyuka",
       "yukar"
@@ -66861,7 +66860,10 @@
     "jp_latin_title": "Ore no Cupid ga Ponkotsu Sugite Kowa~i.",
     "en_latin_title": "My Klutzy Cupid",
     "shortcuts": [
-      "zy"
+      "myk",
+      "tzy",
+      "utz",
+      "ykl"
     ],
     "shortcuts_words": [
       "klutzy"
@@ -66972,7 +66974,6 @@
       "sous"
     ],
     "shortcuts_words": [
-      "koushiki",
       "sousaku"
     ]
   },
@@ -74924,7 +74925,6 @@
     "jp_latin_title": "Hermit Complex",
     "en_latin_title": null,
     "shortcuts": [
-      "herm",
       "itco",
       "mitc",
       "tcom"
@@ -75160,7 +75160,6 @@
     "shortcuts": [
       "flyr",
       "lyro",
-      "roug",
       "yrou"
     ],
     "shortcuts_words": [
@@ -75345,8 +75344,8 @@
       "dlik",
       "eang",
       "elan",
-      "gela",
-      "godl"
+      "godl",
+      "narm"
     ],
     "shortcuts_words": [
       "godlike"
@@ -76297,14 +76296,9 @@
     "jp_latin_title": "Libido Sensou",
     "en_latin_title": null,
     "shortcuts": [
-      "bido",
-      "dose",
-      "ibid",
-      "libi"
+      "dose"
     ],
-    "shortcuts_words": [
-      "libido"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 6690,
@@ -76476,7 +76470,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "krn",
-      "mos",
       "tpo"
     ],
     "shortcuts_words": [
@@ -77351,7 +77344,6 @@
     "shortcuts": [
       "ang",
       "elb",
-      "gel",
       "lbe"
     ],
     "shortcuts_words": [
@@ -81620,7 +81612,6 @@
       "lbet",
       "rulu",
       "stfu",
-      "ulus",
       "waya"
     ],
     "shortcuts_words": [
@@ -82166,7 +82157,7 @@
     "jp_latin_title": "Zombie no Afureta Sekai de Ore Dake ga Osowarenai vol.3",
     "en_latin_title": "I Walk Among Zombies Vol. 3",
     "shortcuts": [
-      "ivo"
+      "aivo"
     ],
     "shortcuts_words": null
   },
@@ -84020,8 +84011,7 @@
     "jp_latin_title": "Watashi ga Anata o Mamoru Tame no 5-tsu no Yakusoku ~Sute Yuusha Hiroimashita.~",
     "en_latin_title": null,
     "shortcuts": [
-      "no5",
-      "o5t"
+      "no5"
     ],
     "shortcuts_words": [
       "hiroimashita"
@@ -84323,10 +84313,10 @@
     "en_latin_title": null,
     "shortcuts": [
       "jiko",
-      "mosa",
       "omoo",
       "omos",
-      "oona"
+      "oona",
+      "toda"
     ],
     "shortcuts_words": [
       "korosu"
@@ -85793,5 +85783,318 @@
       "sukis"
     ],
     "shortcuts_words": null
+  },
+  {
+    "vn_id": 7520,
+    "jp_latin_title": "Akiba Sentai! Engelaver",
+    "en_latin_title": null,
+    "shortcuts": [
+      "ave",
+      "gel"
+    ],
+    "shortcuts_words": [
+      "engelaver",
+      "sentai"
+    ]
+  },
+  {
+    "vn_id": 7521,
+    "jp_latin_title": "REBIRTH OF MIND",
+    "en_latin_title": null,
+    "shortcuts": [
+      "fmin",
+      "hofm",
+      "rtho"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7522,
+    "jp_latin_title": "Sugar+Spice! Party☆Party",
+    "en_latin_title": null,
+    "shortcuts": [
+      "rtyp",
+      "typa"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7523,
+    "jp_latin_title": "Rough Sketch",
+    "en_latin_title": null,
+    "shortcuts": [
+      "hsk"
+    ],
+    "shortcuts_words": [
+      "rough",
+      "sketch"
+    ]
+  },
+  {
+    "vn_id": 7524,
+    "jp_latin_title": "Hermina to Culus ~Lillie no Atelier Mou Hitotsu no Monogatari~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "atoc",
+      "culu",
+      "herm",
+      "lill",
+      "llie"
+    ],
+    "shortcuts_words": [
+      "culus",
+      "hermina"
+    ]
+  },
+  {
+    "vn_id": 7525,
+    "jp_latin_title": "Nemurenu Hitsuji to Kodoku na Ookami -A Tale of Love, and Cutthroat- Gaiden",
+    "en_latin_title": "The Restless Sheep & The Lone Wolf -Woolly Eyes GAIDEN-",
+    "shortcuts": [
+      "atg",
+      "esg",
+      "lye"
+    ],
+    "shortcuts_words": [
+      "restless",
+      "woolly"
+    ]
+  },
+  {
+    "vn_id": 7526,
+    "jp_latin_title": "Uchi no Pet Jijou Vol. 2",
+    "en_latin_title": "NEKO-MIMI SWEET HOUSEMATES Vol. 2",
+    "shortcuts": [
+      "svol2",
+      "uvol2"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7527,
+    "jp_latin_title": "Toshiue Kanojo 2",
+    "en_latin_title": null,
+    "shortcuts": [
+      "ekanojo2"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7528,
+    "jp_latin_title": "Mama Love! 2 ~Ore no Kanojo wa Ore no Mama ☆ Sewayaki Kyonyuu Rio-mama~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "2or"
+    ],
+    "shortcuts_words": [
+      "sewayaki"
+    ]
+  },
+  {
+    "vn_id": 7529,
+    "jp_latin_title": "Mosaic no Tenshi",
+    "en_latin_title": null,
+    "shortcuts": [
+      "mos"
+    ],
+    "shortcuts_words": [
+      "mosaic"
+    ]
+  },
+  {
+    "vn_id": 7530,
+    "jp_latin_title": "Stray Sheep",
+    "en_latin_title": null,
+    "shortcuts": [
+      "raysh",
+      "stray",
+      "yshee"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7531,
+    "jp_latin_title": "Libido Aventure -S Rank Boukensha dakedo, Ponkotsu Succubus dake no Party de Kyoukan Shitemasu-",
+    "en_latin_title": null,
+    "shortcuts": [
+      "cub",
+      "kbo",
+      "nkb",
+      "oav",
+      "tyd"
+    ],
+    "shortcuts_words": [
+      "aventure",
+      "libido"
+    ]
+  },
+  {
+    "vn_id": 7532,
+    "jp_latin_title": "Kujira no Koushiki",
+    "en_latin_title": null,
+    "shortcuts": [
+      "kuj"
+    ],
+    "shortcuts_words": [
+      "koushiki",
+      "kujira"
+    ]
+  },
+  {
+    "vn_id": 7533,
+    "jp_latin_title": "D.C.5 to 4 ~Da Capo 5 to 4~ Luminous Memories",
+    "en_latin_title": null,
+    "shortcuts": [
+      "4l"
+    ],
+    "shortcuts_words": [
+      "luminous"
+    ]
+  },
+  {
+    "vn_id": 7534,
+    "jp_latin_title": "Mikansei Koukyoukyoku",
+    "en_latin_title": null,
+    "shortcuts": [
+      "anseik",
+      "eikouk",
+      "koukyo",
+      "kyouky",
+      "mikans"
+    ],
+    "shortcuts_words": [
+      "koukyoukyoku",
+      "mikansei"
+    ]
+  },
+  {
+    "vn_id": 7535,
+    "jp_latin_title": "Wakagaeri Haha ~Kuchiurusai Oba-san ga Bishoujo ni Naru Nante Hansoku desho!?~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "aiob",
+      "erih",
+      "hiur",
+      "ioba"
+    ],
+    "shortcuts_words": [
+      "kuchiurusai",
+      "wakagaeri"
+    ]
+  },
+  {
+    "vn_id": 7536,
+    "jp_latin_title": "Kuzu Oyaji to Wakarerarenai Haha o Aiyoku Ryakudatsu ~Semarare, Aisare, Netorareru~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "aoa",
+      "kuz"
+    ],
+    "shortcuts_words": [
+      "kuzu",
+      "wakarerarenai"
+    ]
+  },
+  {
+    "vn_id": 7537,
+    "jp_latin_title": "COCORO",
+    "en_latin_title": null,
+    "shortcuts": [
+      "co"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7538,
+    "jp_latin_title": "Kabu Trader Shun",
+    "en_latin_title": null,
+    "shortcuts": [
+      "butr",
+      "kabu",
+      "utra"
+    ],
+    "shortcuts_words": [
+      "trader"
+    ]
+  },
+  {
+    "vn_id": 7539,
+    "jp_latin_title": "FORTUNE×WORLD ~Bokura ga Game o Tsukuru Riyuu~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "dbo",
+      "exw",
+      "ldb",
+      "xwo"
+    ],
+    "shortcuts_words": [
+      "fortunexworld",
+      "tsukuru"
+    ]
+  },
+  {
+    "vn_id": 7540,
+    "jp_latin_title": "Tomodachi no Haha 2 ~Ren'ai Jouju no Kami Appli de Shin'yuu no Kaasan o Koibito ni~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "a2r"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7541,
+    "jp_latin_title": "The Rising Sun",
+    "en_latin_title": null,
+    "shortcuts": [
+      "gsun"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7542,
+    "jp_latin_title": "CRAZY CHA!N -Elpis no Kusari-",
+    "en_latin_title": null,
+    "shortcuts": [
+      "zy"
+    ],
+    "shortcuts_words": [
+      "crazy",
+      "elpis"
+    ]
+  },
+  {
+    "vn_id": 7543,
+    "jp_latin_title": "Kimi ni Madoi, Kimi ni Oboreru.",
+    "en_latin_title": null,
+    "shortcuts": [
+      "adoik",
+      "kimin",
+      "madoi",
+      "nimad"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7544,
+    "jp_latin_title": "Hakuouki Ibun: Berezinskii no Majo",
+    "en_latin_title": null,
+    "shortcuts": [
+      "nsk"
+    ],
+    "shortcuts_words": [
+      "berezinskii"
+    ]
+  },
+  {
+    "vn_id": 7545,
+    "jp_latin_title": "PIANO FORTE",
+    "en_latin_title": null,
+    "shortcuts": [
+      "pian"
+    ],
+    "shortcuts_words": [
+      "forte",
+      "piano"
+    ]
   }
 ]

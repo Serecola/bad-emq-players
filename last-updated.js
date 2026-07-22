@@ -1,1 +1,1 @@
-document.querySelector('.last-updated span').textContent = 'July 5, 2026';
+document.querySelector('.last-updated span').textContent = 'July 21, 2026';

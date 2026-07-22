@@ -12,7 +12,7 @@ from collections import defaultdict
 # across them.  We split the normalized string at every position where a
 # blacklisted character appeared and generate substrings only within each
 # resulting segment.
-BLACKLISTED_CHARS = set('δΔκΚνΝοΟπΠσΣψΨχΧ')
+BLACKLISTED_CHARS = set('δΔκΚνΝοΟπΠσΣψΨχΧ〇')
 
 # ==========================================
 # 1. CUSTOM REPLACEMENT MAP

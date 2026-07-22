@@ -85044,11 +85044,10 @@
     "jp_latin_title": "Idol to 〇〇 Shicha Dame Desu ka?",
     "en_latin_title": "Can I Not Fall for Idols?",
     "shortcuts": [
-      "〇"
+      "llf",
+      "otf"
     ],
-    "shortcuts_words": [
-      "〇〇"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 7462,

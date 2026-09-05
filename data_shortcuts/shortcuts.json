@@ -509,8 +509,7 @@
       "shar"
     ],
     "shortcuts_words": [
-      "sharin",
-      "sunflowers"
+      "sharin"
     ]
   },
   {
@@ -1616,10 +1615,7 @@
     "jp_latin_title": "Himawari",
     "en_latin_title": "Himawari - The Sunflower -",
     "shortcuts": [
-      "hesu",
-      "hima",
-      "sunf",
-      "unfl"
+      "hesu"
     ],
     "shortcuts_words": null
   },
@@ -16146,7 +16142,6 @@
     "jp_latin_title": "Sono Hanabira ni Kuchizuke o: Kuchibiru to Kiss de Tsubuyaite",
     "en_latin_title": null,
     "shortcuts": [
-      "keok",
       "uyai"
     ],
     "shortcuts_words": [
@@ -16681,7 +16676,9 @@
     "jp_latin_title": "Hachimitsu Otome Blossomdays",
     "en_latin_title": null,
     "shortcuts": [
-      "hac"
+      "mebl",
+      "omda",
+      "somd"
     ],
     "shortcuts_words": [
       "blossomdays",
@@ -18199,8 +18196,10 @@
     "jp_latin_title": "Hoshizora no Memoria -Eternal Heart-",
     "en_latin_title": "Hoshizora no Memoria -Eternal Heart-",
     "shortcuts": [
-      "iaet",
-      "riae"
+      "alhea",
+      "iaete",
+      "nalhe",
+      "oriae"
     ],
     "shortcuts_words": null
   },
@@ -18428,7 +18427,10 @@
     "jp_latin_title": "Sono Hanabira ni Kuchizuke o: Tenshi no Hanabira Zome",
     "en_latin_title": null,
     "shortcuts": [
-      "razo"
+      "azome",
+      "biraz",
+      "irazo",
+      "razom"
     ],
     "shortcuts_words": null
   },
@@ -24525,7 +24527,7 @@
     "jp_latin_title": "Silent Half",
     "en_latin_title": null,
     "shortcuts": [
-      "sil"
+      "ntha"
     ],
     "shortcuts_words": [
       "silent"
@@ -27509,7 +27511,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "chuf",
-      "chur",
       "hufa",
       "hure",
       "ttol"
@@ -29133,7 +29134,6 @@
     "en_latin_title": null,
     "shortcuts": [
       "ahot",
-      "essu",
       "izuh",
       "ssuk"
     ],
@@ -30709,7 +30709,6 @@
     "shortcuts": [
       "isumm",
       "mersn",
-      "mmers",
       "ukisu"
     ],
     "shortcuts_words": [
@@ -38506,14 +38505,17 @@
   {
     "vn_id": 3424,
     "jp_latin_title": "Himawari no Kyoukai to Nagai Natsuyasumi",
-    "en_latin_title": null,
+    "en_latin_title": "HimaNatsu: Of Churches, Sunflowers, and Long Summers",
     "shortcuts": [
-      "ainat",
-      "aiton",
-      "nagai",
-      "tonag"
+      "fch",
+      "ofc",
+      "ssu",
+      "uof"
     ],
-    "shortcuts_words": null
+    "shortcuts_words": [
+      "churches",
+      "himanatsu"
+    ]
   },
   {
     "vn_id": 3425,
@@ -42268,9 +42270,7 @@
     "shortcuts": [
       "lsb"
     ],
-    "shortcuts_words": [
-      "girls"
-    ]
+    "shortcuts_words": null
   },
   {
     "vn_id": 3755,
@@ -48563,8 +48563,7 @@
       "lenc"
     ],
     "shortcuts_words": [
-      "pedant",
-      "silence"
+      "pedant"
     ]
   },
   {
@@ -50146,14 +50145,13 @@
   {
     "vn_id": 4436,
     "jp_latin_title": "Koi Suru Kimochi no Kasanekata",
-    "en_latin_title": null,
+    "en_latin_title": "Koikata: How Our Love Grows",
     "shortcuts": [
-      "asane",
-      "okasa",
-      "sanek"
+      "wou"
     ],
     "shortcuts_words": [
-      "kasanekata"
+      "kasanekata",
+      "koikata"
     ]
   },
   {
@@ -50351,7 +50349,6 @@
     "shortcuts": [
       "hakad",
       "kador",
-      "risug",
       "yomes"
     ],
     "shortcuts_words": [
@@ -50750,7 +50747,6 @@
     "jp_latin_title": "Samidare Growing Up!",
     "en_latin_title": null,
     "shortcuts": [
-      "egro",
       "owin",
       "regr",
       "rowi",
@@ -52956,8 +52952,7 @@
     "jp_latin_title": "Little ☆ Twins ~Sugu ni Toriko ni Shiteageru♪~",
     "en_latin_title": null,
     "shortcuts": [
-      "lit",
-      "ssu"
+      "lit"
     ],
     "shortcuts_words": [
       "little"
@@ -55099,7 +55094,6 @@
       "ecul",
       "larl",
       "osti",
-      "rlov",
       "tins"
     ],
     "shortcuts_words": [
@@ -58189,8 +58183,7 @@
       "lour",
       "olou",
       "sans",
-      "ueko",
-      "urlo"
+      "ueko"
     ],
     "shortcuts_words": [
       "sanshoku",
@@ -71509,7 +71502,6 @@
     "shortcuts": [
       "d2t",
       "kca",
-      "ofc",
       "ogn"
     ],
     "shortcuts_words": [
@@ -79819,8 +79811,7 @@
     "jp_latin_title": "Kyonyuu Hitozuma wa, Bonyuu o Fuite Iki Makuru ~Wakai Doutei ni Ochiru Tsuma~",
     "en_latin_title": null,
     "shortcuts": [
-      "fui",
-      "uof"
+      "fui"
     ],
     "shortcuts_words": [
       "fuite"
@@ -80696,7 +80687,10 @@
     "jp_latin_title": "Nagaruboshi Fandisk.",
     "en_latin_title": null,
     "shortcuts": [
-      "hifan"
+      "boshif",
+      "hifand",
+      "oshifa",
+      "shifan"
     ],
     "shortcuts_words": null
   },
@@ -81998,7 +81992,6 @@
     "jp_latin_title": "Mahou Senshi Fairy Break",
     "en_latin_title": null,
     "shortcuts": [
-      "hifa",
       "ifai",
       "iryb",
       "rybr"
@@ -86981,6 +86974,116 @@
     "shortcuts_words": [
       "akebono",
       "spring"
+    ]
+  },
+  {
+    "vn_id": 7635,
+    "jp_latin_title": "Sengoku † Koihime BRAVE Ni ~Senran no Kyuushuu, Shimazu Hen~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "azuh"
+    ],
+    "shortcuts_words": [
+      "kyuushuu",
+      "shimazu"
+    ]
+  },
+  {
+    "vn_id": 7636,
+    "jp_latin_title": "Kojin Taxi 3",
+    "en_latin_title": null,
+    "shortcuts": [
+      "xi3"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7637,
+    "jp_latin_title": "Kokoro Note o Anata ni -Kokoro Note for you-",
+    "en_latin_title": null,
+    "shortcuts": [
+      "eoan",
+      "otef"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7638,
+    "jp_latin_title": "Girl's Chat ~Wakariaetara~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "atwa",
+      "hatw",
+      "iaet",
+      "riae",
+      "rlsc"
+    ],
+    "shortcuts_words": [
+      "girls",
+      "wakariaetara"
+    ]
+  },
+  {
+    "vn_id": 7639,
+    "jp_latin_title": "Oshikake Oku-sama to, Kimi no Uso",
+    "en_latin_title": null,
+    "shortcuts": [
+      "keok"
+    ],
+    "shortcuts_words": null
+  },
+  {
+    "vn_id": 7640,
+    "jp_latin_title": "Momoiro Okami no Honoka-san ~Ikenai, O-mo-te-na-shi~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "aiomo",
+      "anike",
+      "honok",
+      "iomot",
+      "irook"
+    ],
+    "shortcuts_words": [
+      "honoka"
+    ]
+  },
+  {
+    "vn_id": 7641,
+    "jp_latin_title": "MeiKura ~Zokusei Morisugi Maidroid to, Maketakunai Classmate no Gohoushi Seikatsu~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "droi",
+      "dtom",
+      "icla",
+      "idro",
+      "oidt"
+    ],
+    "shortcuts_words": [
+      "meikura",
+      "zokusei"
+    ]
+  },
+  {
+    "vn_id": 7642,
+    "jp_latin_title": "Hachigatsu no Junkyouchi",
+    "en_latin_title": null,
+    "shortcuts": [
+      "hac"
+    ],
+    "shortcuts_words": [
+      "hachigatsu",
+      "junkyouchi"
+    ]
+  },
+  {
+    "vn_id": 7643,
+    "jp_latin_title": "Silence ~Seinaru Yoru no Kane no Naka de...~",
+    "en_latin_title": null,
+    "shortcuts": [
+      "sil"
+    ],
+    "shortcuts_words": [
+      "silence"
     ]
   }
 ]
